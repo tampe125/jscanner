@@ -19,9 +19,16 @@ def create_hash():
             continue
 
         # Detect Joomla version
-        with open('import/' + folder + '/administrator/manifests/files/joomla.xml', 'rb') as manifest:
-            contents = manifest.read()
-            version = re.search(r'<version>(?P<version>.*?)</version>', contents).groupdict().get('version', '')
+        try:
+            with open('import/' + folder + '/administrator/manifests/files/joomla.xml', 'rb') as manifest:
+                contents = manifest.read()
+                version = re.search(r'<version>(?P<version>.*?)</version>', contents).groupdict().get('version', '')
+        except IOError:
+            version = ''
+
+        if not version:
+            print "Could not detect Joomla! version for folder: " + folder
+            continue
 
         for sign_folder in sign_folders:
             for root, dirs, files in os.walk('import/' + folder + '/' + sign_folder):
