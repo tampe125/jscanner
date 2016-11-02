@@ -1,10 +1,12 @@
 import hashlib
 import json
 import os
+import re
 
 
 def create_hash():
     prev_version = ''
+    sign_folders = ['media/media', 'media/system', 'templates']
 
     try:
         with open('data/hashes.json', 'rb') as json_handle:
@@ -12,37 +14,46 @@ def create_hash():
     except IOError:
         hashes = {}
 
-    for root, dirs, files in os.walk('import'):
-        for filename in files:
-            extension = os.path.splitext(filename)[1]
+    for folder in os.listdir('import'):
+        if not os.path.isdir('import/' + folder):
+            continue
 
-            if extension not in ['.js', '.css']:
-                continue
+        # Detect Joomla version
+        with open('import/' + folder + '/administrator/manifests/files/joomla.xml', 'rb') as manifest:
+            contents = manifest.read()
+            version = re.search(r'<version>(?P<version>.*?)</version>', contents).groupdict().get('version', '')
 
-            if ('.min.' in filename) or ('-uncompressed' in filename):
-                continue
+        for sign_folder in sign_folders:
+            for root, dirs, files in os.walk('import/' + folder + '/' + sign_folder):
+                for filename in files:
+                    extension = os.path.splitext(filename)[1]
 
-            parts = root.split('/')
-            version = parts[1]
-            path = '/'.join(parts[2:]) + '/' + filename
+                    if extension not in ['.js', '.css']:
+                        continue
 
-            if version != prev_version:
-                print "Analyzing version " + version
-                prev_version = version
+                    if ('.min.' in filename) or ('-uncompressed' in filename):
+                        continue
 
-            with open(root + '/' + filename, 'rb') as handle:
-                digest = hashlib.sha1(handle.read()).hexdigest()
+                    parts = root.split('/')
+                    path = '/'.join(parts[2:]) + '/' + filename
 
-                if hashes.get(path, 'foobar') == 'foobar':
-                    hashes[path] = {}
+                    if version != prev_version:
+                        print "Analyzing version " + version
+                        prev_version = version
 
-                if hashes[path].get(digest, 'foobar') == 'foobar':
-                    hashes[path][digest] = []
+                    with open(root + '/' + filename, 'rb') as handle:
+                        digest = hashlib.sha1(handle.read()).hexdigest()
 
-                if version in hashes[path][digest]:
-                    continue
+                        if hashes.get(path, 'foobar') == 'foobar':
+                            hashes[path] = {}
 
-                hashes[path][digest].append(version)
+                        if hashes[path].get(digest, 'foobar') == 'foobar':
+                            hashes[path][digest] = []
+
+                        if version in hashes[path][digest]:
+                            continue
+
+                        hashes[path][digest].append(version)
 
     with open('data/hashes.json', 'wb') as handle:
         json.dump(hashes, handle, indent=2, sort_keys=True)
