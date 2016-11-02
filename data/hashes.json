@@ -1,0 +1,916 @@
+{
+  "media/media/css/mediaelementplayer.css": {
+    "08dac19f39abe3addd5e53049c8e08d1053b88a8": [
+      "3.6.3", 
+      "3.6.4"
+    ], 
+    "16782ae0481bdc899b3d990761cbc46597878689": [
+      "3.5.0", 
+      "3.5.1", 
+      "3.6.0", 
+      "3.6.2"
+    ]
+  }, 
+  "media/media/css/medialist-details.css": {
+    "1a1b9cc626820b1cf4c61aad6f9ab4d79ecde3e0": [
+      "3.5.0", 
+      "3.5.1", 
+      "3.6.0", 
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ]
+  }, 
+  "media/media/css/medialist-details_rtl.css": {
+    "ef4e6c8bc745bcd2dea4df7cb144abba785d63fe": [
+      "3.5.0", 
+      "3.5.1", 
+      "3.6.0", 
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ]
+  }, 
+  "media/media/css/medialist-thumbs.css": {
+    "1bf771a3ad878c3fb4e571f28a2bb8dd29818af3": [
+      "3.5.0", 
+      "3.5.1", 
+      "3.6.0", 
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ]
+  }, 
+  "media/media/css/medialist-thumbs_rtl.css": {
+    "9a622e34c4a21bd12e8529281b87465e8ed87fad": [
+      "3.5.0", 
+      "3.5.1", 
+      "3.6.0", 
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ]
+  }, 
+  "media/media/css/mediamanager.css": {
+    "90e593cb87ad1acd6952100f63d0619b8e8dd42d": [
+      "3.5.0", 
+      "3.5.1"
+    ], 
+    "aee889fc0f1731d731b0991824a7b38cf07473f7": [
+      "3.6.0", 
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ]
+  }, 
+  "media/media/css/mediamanager_rtl.css": {
+    "8ea640c763657c96dba96a9086695a114b1423e3": [
+      "3.5.0", 
+      "3.5.1", 
+      "3.6.0", 
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ]
+  }, 
+  "media/media/css/mejs-skins.css": {
+    "d0c26f4763966ec08be847159a7a034f47ff6a46": [
+      "3.5.0", 
+      "3.5.1", 
+      "3.6.0", 
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ]
+  }, 
+  "media/media/css/popup-imagelist.css": {
+    "c61104e637e90eb00387b9eafce5444b0bc88dd9": [
+      "3.5.0", 
+      "3.5.1", 
+      "3.6.0", 
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ]
+  }, 
+  "media/media/css/popup-imagelist_rtl.css": {
+    "88dbb9de49eebb29e5d9b22d96bccab31fafd7cd": [
+      "3.5.0", 
+      "3.5.1", 
+      "3.6.0", 
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ]
+  }, 
+  "media/media/css/popup-imagemanager.css": {
+    "c9e8220667671740cfc37c8af083da8ae931c036": [
+      "3.5.0", 
+      "3.5.1", 
+      "3.6.0", 
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ]
+  }, 
+  "media/media/css/popup-imagemanager_rtl.css": {
+    "53356a7d1a9979a64f9b69fa63b3fa5853bfa70f": [
+      "3.5.0", 
+      "3.5.1", 
+      "3.6.0", 
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ]
+  }, 
+  "media/media/js/mediaelement-and-player.js": {
+    "32f6d563611a5092973859cd061902f5d102f796": [
+      "3.6.3", 
+      "3.6.4"
+    ], 
+    "781e95ef042b5214a725669101fdf087d807b187": [
+      "3.6.0", 
+      "3.6.2"
+    ], 
+    "b3509385b4d5600b0d88ba8fea6516c1a5c1fef8": [
+      "3.5.0", 
+      "3.5.1"
+    ]
+  }, 
+  "media/media/js/mediafield-mootools.js": {
+    "588ee27fe34b6b1d6db95d780faaa38d919a2b95": [
+      "3.5.0", 
+      "3.5.1", 
+      "3.6.0", 
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ]
+  }, 
+  "media/media/js/mediafield.js": {
+    "680ebd1fbe0d2f5baf34bc13e7da45589e681590": [
+      "3.5.0", 
+      "3.5.1", 
+      "3.6.0", 
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ]
+  }, 
+  "media/media/js/mediamanager.js": {
+    "082995c749b7bb676680f7b7f7a326616ec92cc8": [
+      "3.5.0", 
+      "3.5.1", 
+      "3.6.0", 
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ]
+  }, 
+  "media/media/js/popup-imagemanager.js": {
+    "e02287598b191d56539372438f0e4d7c24dec1c1": [
+      "3.5.0", 
+      "3.5.1", 
+      "3.6.0", 
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ]
+  }, 
+  "media/system/css/adminlist.css": {
+    "327e28ea4dc8852ea5025c5f4ea532b4e3e5b85b": [
+      "3.5.0", 
+      "3.5.1", 
+      "3.6.0", 
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ]
+  }, 
+  "media/system/css/calendar-jos.css": {
+    "e5cbf216177f94cb11c1a2f3a2cc5c712e10a538": [
+      "3.5.0", 
+      "3.5.1", 
+      "3.6.0", 
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ]
+  }, 
+  "media/system/css/frontediting.css": {
+    "87cd866e60d5238fb67adb729de6ba44b3293fc1": [
+      "3.5.0", 
+      "3.5.1", 
+      "3.6.0", 
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ]
+  }, 
+  "media/system/css/modal.css": {
+    "c1f8db5d43203b36870e1a4efb6c04e2c0a3e360": [
+      "3.6.3", 
+      "3.6.4"
+    ], 
+    "f28398768b27b58d61c0791f7097c42b2f5ed556": [
+      "3.5.0", 
+      "3.5.1", 
+      "3.6.0", 
+      "3.6.2"
+    ]
+  }, 
+  "media/system/css/mootree.css": {
+    "b9eafed40f6e159614b4f1023255cfd9dcf7337e": [
+      "3.5.0", 
+      "3.5.1", 
+      "3.6.0", 
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ]
+  }, 
+  "media/system/css/mootree_rtl.css": {
+    "cf336e79d4fc93faf8a46fa4ff292b79d5c16cdf": [
+      "3.5.0", 
+      "3.5.1", 
+      "3.6.0", 
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ]
+  }, 
+  "media/system/css/system.css": {
+    "42340717cd318ffab5b976925ace2b79717a3110": [
+      "3.5.0", 
+      "3.5.1", 
+      "3.6.0", 
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ]
+  }, 
+  "media/system/js/calendar-setup.js": {
+    "d0d85408adefaf1f290b0fefbea30a77bc693f35": [
+      "3.5.0", 
+      "3.5.1", 
+      "3.6.0", 
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ]
+  }, 
+  "media/system/js/calendar.js": {
+    "567cc03cef76b20984f75742007dd9f7ffcdf691": [
+      "3.5.0", 
+      "3.5.1", 
+      "3.6.0", 
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ]
+  }, 
+  "media/system/js/caption.js": {
+    "9c431113357e1a7147388978bde9b70a3ff6114a": [
+      "3.5.0", 
+      "3.5.1", 
+      "3.6.0", 
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ]
+  }, 
+  "media/system/js/combobox.js": {
+    "5f85a4ab320d0b682cc6f040d1c1c9d11022dc56": [
+      "3.5.0", 
+      "3.5.1", 
+      "3.6.0", 
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ]
+  }, 
+  "media/system/js/core.js": {
+    "32e2e31e13f68c6a42b0e048395e52181b2c96bf": [
+      "3.6.3", 
+      "3.6.4"
+    ], 
+    "5693a611c8801b9d86c18212d0c6187bedefdaca": [
+      "3.6.0", 
+      "3.6.2"
+    ], 
+    "ff38939029e172378c3abee26e56e1c5f8aad63e": [
+      "3.5.0", 
+      "3.5.1"
+    ]
+  }, 
+  "media/system/js/frontediting.js": {
+    "dc2a0a11c4ba3ad7f31b63568332a659732ced77": [
+      "3.5.0", 
+      "3.5.1"
+    ], 
+    "fff04e6577e96647b1f308c2d68a7c0b5142aeb6": [
+      "3.6.0", 
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ]
+  }, 
+  "media/system/js/helpsite.js": {
+    "1020b05a6a38c0b2c13b91f1b42557f31abc5b90": [
+      "3.5.0", 
+      "3.5.1", 
+      "3.6.0", 
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ]
+  }, 
+  "media/system/js/highlighter.js": {
+    "e224398bbdc4536bcb22bc2ad495afe558cf868d": [
+      "3.5.0", 
+      "3.5.1", 
+      "3.6.0", 
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ]
+  }, 
+  "media/system/js/html5fallback.js": {
+    "3c5911a0798acb3e1ddd44dd35dbe8aad3d96f0d": [
+      "3.6.0", 
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ], 
+    "9f7caa00f628ad7632fd4711bc3865a1d9ebc18a": [
+      "3.5.0", 
+      "3.5.1"
+    ]
+  }, 
+  "media/system/js/jquery.Jcrop.js": {
+    "a6d87c737f872f4ee7c5e0340f6425c4d811033d": [
+      "3.5.0", 
+      "3.5.1"
+    ], 
+    "adb127860463fbf39b18f5381a1c0f6fd3a968b9": [
+      "3.6.0", 
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ]
+  }, 
+  "media/system/js/modal.js": {
+    "5d8bdcc312e81e1ad3fe6bf1d9f8cade583f8c56": [
+      "3.5.0", 
+      "3.5.1", 
+      "3.6.0", 
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ]
+  }, 
+  "media/system/js/moduleorder.js": {
+    "bee53bc2e47bc32c0e577a86bcb07da4ba079012": [
+      "3.6.3", 
+      "3.6.4"
+    ]
+  }, 
+  "media/system/js/mootools-core.js": {
+    "c7b66b70133c005c8283f3e1843db92769f71d38": [
+      "3.5.0", 
+      "3.5.1", 
+      "3.6.0", 
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ]
+  }, 
+  "media/system/js/mootools-more.js": {
+    "a5124b0be4decb1ebca72e44531c3da85f0170f6": [
+      "3.5.0", 
+      "3.5.1", 
+      "3.6.0", 
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ]
+  }, 
+  "media/system/js/mootree.js": {
+    "2f49359583f3e4931c8aa28fe12509862d300355": [
+      "3.5.0", 
+      "3.5.1", 
+      "3.6.0", 
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ]
+  }, 
+  "media/system/js/multiselect.js": {
+    "53e59548431d5c62efc60f8a1bba65232b6dd19b": [
+      "3.5.0", 
+      "3.5.1", 
+      "3.6.0", 
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ]
+  }, 
+  "media/system/js/passwordstrength.js": {
+    "881865bf072698574ce6ddb3723f8395cb323cc6": [
+      "3.5.0", 
+      "3.5.1", 
+      "3.6.0", 
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ]
+  }, 
+  "media/system/js/permissions.js": {
+    "81b5e503deca80f0f1f27a8cf1643b81f8e36c02": [
+      "3.5.0", 
+      "3.5.1"
+    ], 
+    "8b1db73705ef0264ade148730a11f892c6430823": [
+      "3.6.0", 
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ]
+  }, 
+  "media/system/js/progressbar.js": {
+    "31cf56d501914ef4fad92bc47ba2b8382a544f7a": [
+      "3.5.0", 
+      "3.5.1", 
+      "3.6.0", 
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ]
+  }, 
+  "media/system/js/punycode.js": {
+    "2e47443968925bc1c4ef69238e2447ea43656eb1": [
+      "3.6.0"
+    ], 
+    "5fbcf773fa1d62e14c065c031d3f071959d9d5ab": [
+      "3.5.0", 
+      "3.5.1"
+    ], 
+    "b49fd6432d61a892ce49debcf95463e8926b4f50": [
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ]
+  }, 
+  "media/system/js/repeatable.js": {
+    "487b91443e42eea85b449dfd87503657656521ae": [
+      "3.6.3", 
+      "3.6.4"
+    ], 
+    "e544949964b966ba23eb1da699719e80c6a96b81": [
+      "3.5.0", 
+      "3.5.1", 
+      "3.6.0", 
+      "3.6.2"
+    ]
+  }, 
+  "media/system/js/sendtestmail.js": {
+    "63c02b9b41a2f8636a17efdf80bf7dc9b1b29041": [
+      "3.6.0"
+    ], 
+    "a49d1d15412dc5333de5a2406ead1b3e05fcad20": [
+      "3.5.0"
+    ], 
+    "c3fa52f8365a77f3a579e4a3c470daf3d5a991e7": [
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ], 
+    "dfb2a96a57ab2155d1ed64faf71bc71a33c9fe29": [
+      "3.5.1"
+    ]
+  }, 
+  "media/system/js/subform-repeatable.js": {
+    "6da966bd1d5d04d7f074a4ceb423ad7e8b9b5066": [
+      "3.6.3", 
+      "3.6.4"
+    ], 
+    "c9264687c12c8cdbfc419ec534aa993e8547f3f0": [
+      "3.6.0", 
+      "3.6.2"
+    ]
+  }, 
+  "media/system/js/switcher.js": {
+    "3765a421489c20fd801d2c8a29adc1bc71a34fc0": [
+      "3.5.0", 
+      "3.5.1", 
+      "3.6.0", 
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ]
+  }, 
+  "media/system/js/tabs-state.js": {
+    "4255064166e14a82ef26019db4395bb4496be182": [
+      "3.6.0"
+    ], 
+    "44ecda9952727429f5fe007563c6c731e64dc0fa": [
+      "3.6.2"
+    ], 
+    "a13e32a02287bbfec967104ee77324f6708c790d": [
+      "3.5.0", 
+      "3.5.1"
+    ], 
+    "e988c21695a9da378cbba9dd32789554b1f2b610": [
+      "3.6.3", 
+      "3.6.4"
+    ]
+  }, 
+  "media/system/js/tabs.js": {
+    "8bee02929e6fbf3f1e930a5b21486bdc6541c02c": [
+      "3.6.0", 
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ], 
+    "8fbaa28ec9d4ca17bd9a0b84842c2fda13893714": [
+      "3.5.0", 
+      "3.5.1"
+    ]
+  }, 
+  "media/system/js/tiny-close.js": {
+    "2c308b3ca2b2e339f23bb6ef1710a591b59e70aa": [
+      "3.6.0"
+    ], 
+    "74f17af6f2f23bb625ddfe9cae7b8983dd5339f9": [
+      "3.6.3", 
+      "3.6.4"
+    ], 
+    "7abd8dcb2122d296bd4b7e627c32938c4eaca289": [
+      "3.6.2"
+    ]
+  }, 
+  "media/system/js/validate.js": {
+    "4b2a75ecc775e16deb73e6b6c5ff217b5de15a54": [
+      "3.6.0"
+    ], 
+    "ef2178d92460e6fadec4a37d1543c26e33b9084e": [
+      "3.5.0", 
+      "3.5.1"
+    ], 
+    "f23cd274528be770f8cdce1c05d08c463357bf9d": [
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ]
+  }, 
+  "templates/beez3/css/general.css": {
+    "1ac320a79b0e54e0a4c13b2161a1f17857b4086e": [
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ], 
+    "64d110a8fe827821492361746f3bf7192327a553": [
+      "3.5.0", 
+      "3.5.1"
+    ], 
+    "e65cba28e0a97977bd6b0810a3d7794a60e90876": [
+      "3.6.0"
+    ]
+  }, 
+  "templates/beez3/css/ie7only.css": {
+    "02eba0c52d014fdb25cc0e53d9373b9c1c20bd01": [
+      "3.6.0", 
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ], 
+    "822275608813f7abeedf5dbe33e97a0961692cdc": [
+      "3.5.0", 
+      "3.5.1"
+    ]
+  }, 
+  "templates/beez3/css/ieonly.css": {
+    "1b7f66523878bce45f801c8540401e8512131dce": [
+      "3.6.0", 
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ], 
+    "3c8e36ce360c133ae341b42ce799d53da2fa05e3": [
+      "3.5.0", 
+      "3.5.1"
+    ]
+  }, 
+  "templates/beez3/css/layout.css": {
+    "04c67b7355dc4eb1be65f835b3b780f8398ea75e": [
+      "3.5.0", 
+      "3.5.1"
+    ], 
+    "a1add016093fcf45ccf80166363647a0feea67cd": [
+      "3.6.3", 
+      "3.6.4"
+    ], 
+    "d5d35d5db7d0e59f085644267b595a2f9021a246": [
+      "3.6.0", 
+      "3.6.2"
+    ]
+  }, 
+  "templates/beez3/css/nature.css": {
+    "fceeb9f5ce9b991fec7dad29429dec4d5b1ae7f9": [
+      "3.5.0", 
+      "3.5.1", 
+      "3.6.0", 
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ]
+  }, 
+  "templates/beez3/css/nature_rtl.css": {
+    "ae5eda3f9c975354676c926fd6207e25168094aa": [
+      "3.5.0", 
+      "3.5.1", 
+      "3.6.0", 
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ]
+  }, 
+  "templates/beez3/css/personal.css": {
+    "b266f34ead20691ec236df9e951df1f3a165a8ba": [
+      "3.5.0", 
+      "3.5.1", 
+      "3.6.0", 
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ]
+  }, 
+  "templates/beez3/css/personal_rtl.css": {
+    "3a0e118b10b836af8bc9a37fcd561b21b96c3fbb": [
+      "3.5.0", 
+      "3.5.1", 
+      "3.6.0", 
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ]
+  }, 
+  "templates/beez3/css/position.css": {
+    "2fee603dfe196ab8ea849829dd5eed624193fa05": [
+      "3.6.0", 
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ], 
+    "8b1a09e19d3484e1641aad3c4cddd593d8e8b938": [
+      "3.5.0", 
+      "3.5.1"
+    ]
+  }, 
+  "templates/beez3/css/print.css": {
+    "1ebcc119a2311f5b0a16c7ff363e446a9293b2dc": [
+      "3.5.0", 
+      "3.5.1"
+    ], 
+    "d077714dc90b391dd1fdbb417e013b7b091e4bc6": [
+      "3.6.0", 
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ]
+  }, 
+  "templates/beez3/css/red.css": {
+    "30bd998619c46fcc210750ca8b840893636ec431": [
+      "3.5.0", 
+      "3.5.1", 
+      "3.6.0", 
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ]
+  }, 
+  "templates/beez3/css/template.css": {
+    "3746334247385d1e344b45874d28d31fd7dc0197": [
+      "3.6.0", 
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ], 
+    "54c7f9316a1d55f54ff74f4928cafb5f7edb2afa": [
+      "3.5.0", 
+      "3.5.1"
+    ]
+  }, 
+  "templates/beez3/css/template_rtl.css": {
+    "38eefb82c557265496010e74c9d9f4c1fbdc23a6": [
+      "3.5.0", 
+      "3.5.1", 
+      "3.6.0"
+    ], 
+    "7067a808250576051fde57ebc34b5871e8e0c319": [
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ]
+  }, 
+  "templates/beez3/css/turq.css": {
+    "cc7d8e429ec520e4b1038138da3a3136577cc467": [
+      "3.5.0", 
+      "3.5.1", 
+      "3.6.0", 
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ]
+  }, 
+  "templates/beez3/javascript/hide.js": {
+    "90a377351a048e53ef1dea1c619713714a647c8f": [
+      "3.5.0", 
+      "3.5.1", 
+      "3.6.0", 
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ]
+  }, 
+  "templates/beez3/javascript/md_stylechanger.js": {
+    "6a63b9c2709a636534e2cad53e4f56e63c83c3a4": [
+      "3.5.0", 
+      "3.5.1", 
+      "3.6.0", 
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ]
+  }, 
+  "templates/beez3/javascript/respond.js": {
+    "8711ae22b419a15d55ae0b9cc656c550320c6e4d": [
+      "3.5.0", 
+      "3.5.1", 
+      "3.6.0", 
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ]
+  }, 
+  "templates/beez3/javascript/respond.src.js": {
+    "48e0e51a497408f4f23b25d86975554332ff9e11": [
+      "3.5.0", 
+      "3.5.1", 
+      "3.6.0", 
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ]
+  }, 
+  "templates/beez3/javascript/template.js": {
+    "20b50380a6ec3dd59413fbaa61b9659beac43507": [
+      "3.5.0", 
+      "3.5.1", 
+      "3.6.0"
+    ], 
+    "92d218109218a151bbdb2ff62650c8e7652303f2": [
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ]
+  }, 
+  "templates/protostar/css/offline.css": {
+    "7466b48be695961a95829e7427d2309579af2669": [
+      "3.6.0", 
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ]
+  }, 
+  "templates/protostar/css/template.css": {
+    "2efc0d4d97d93c61b79c6592c9068bf54a747b0f": [
+      "3.6.0"
+    ], 
+    "40f585b7cf74f3f504c2eb736bb564b1b2127350": [
+      "3.5.0", 
+      "3.5.1"
+    ], 
+    "a7c6a3ce8e07ea96a220694a56446147737e95e6": [
+      "3.6.2"
+    ], 
+    "bee3d6f73eca536f53cf4427a201e4679295f16a": [
+      "3.6.3", 
+      "3.6.4"
+    ]
+  }, 
+  "templates/protostar/js/application.js": {
+    "59e1eac17c51d4d3278d0fbe6d2966fb9c5b248e": [
+      "3.5.0", 
+      "3.5.1", 
+      "3.6.0", 
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ]
+  }, 
+  "templates/protostar/js/classes.js": {
+    "c05f680343148e5ae4d73b79a04cd6104bff3ca5": [
+      "3.5.0", 
+      "3.5.1", 
+      "3.6.0", 
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ]
+  }, 
+  "templates/protostar/js/template.js": {
+    "9b0ab5b1771cc6a6a60d7c762077779171a52e2b": [
+      "3.6.3", 
+      "3.6.4"
+    ], 
+    "dbc33bf75848089bae248d2b7dbf20d31a442601": [
+      "3.5.0", 
+      "3.5.1", 
+      "3.6.0"
+    ], 
+    "de8155922d069d68a1d35362bf827d9dba3f56bd": [
+      "3.6.2"
+    ]
+  }, 
+  "templates/system/css/editor.css": {
+    "16aac6c1e90e98c17877ee0b08b742456327c0dd": [
+      "3.5.0", 
+      "3.5.1", 
+      "3.6.0", 
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ]
+  }, 
+  "templates/system/css/error.css": {
+    "13a1de06d09b7e45643c441e5fe7353d99941f0c": [
+      "3.5.0", 
+      "3.5.1", 
+      "3.6.0", 
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ]
+  }, 
+  "templates/system/css/error_rtl.css": {
+    "0d5e85a2eff002dad10426246c3338793c145d2c": [
+      "3.5.0", 
+      "3.5.1", 
+      "3.6.0", 
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ]
+  }, 
+  "templates/system/css/general.css": {
+    "2a4988f1a294054064b8b9957199b77c63ffa459": [
+      "3.5.0", 
+      "3.5.1", 
+      "3.6.0", 
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ]
+  }, 
+  "templates/system/css/offline.css": {
+    "3741e73d33f3771cddbe1a56be5aade445965e26": [
+      "3.5.0", 
+      "3.5.1", 
+      "3.6.0", 
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ]
+  }, 
+  "templates/system/css/offline_rtl.css": {
+    "2774d40cd746f11d06e056af07fe23b2d2f7ceca": [
+      "3.5.0", 
+      "3.5.1", 
+      "3.6.0", 
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ]
+  }, 
+  "templates/system/css/system.css": {
+    "99189be2be62ad7422bb07b9bb988d7b5df5bea2": [
+      "3.5.0", 
+      "3.5.1", 
+      "3.6.0", 
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ]
+  }, 
+  "templates/system/css/toolbar.css": {
+    "f8f1fb801d247e30f83dfe97523770dff4370cab": [
+      "3.5.0", 
+      "3.5.1", 
+      "3.6.0", 
+      "3.6.2", 
+      "3.6.3", 
+      "3.6.4"
+    ]
+  }
+}
