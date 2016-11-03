@@ -35,6 +35,8 @@ JScanner - What's under the hood?
 
         self.args = parser.parse_args()
 
+        # TODO Sanity check on the url (add protocol)
+
         # Let's silence the requests package logger
         logging.getLogger("requests").setLevel(logging.WARNING)
 

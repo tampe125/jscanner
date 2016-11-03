@@ -1,6 +1,7 @@
 import json
 from hashlib import sha1 as hashlib_sha1
 from requests import get as requests_get
+from requests import ConnectionError
 from lib.runner.abstract import AbstractCommand
 
 __author__ = 'Davide Tampellini'
@@ -10,7 +11,14 @@ __license__ = 'GNU GPL version 3 or later'
 
 class JScannerGetversion(AbstractCommand):
     def check(self):
-        self.parentArgs.url = self.parentArgs.url.strip('/') + '/'
+        # Check if the remote site is online
+        try:
+            response = requests_get(self.parentArgs.url)
+        except ConnectionError:
+            raise Exception("Could not connect to the remote site")
+
+        if response.status_code != 200:
+            raise Exception("Remote site responded with code: %s" % response.status_code)
 
     def run(self):
         version = self._xml_file()
@@ -29,7 +37,7 @@ class JScannerGetversion(AbstractCommand):
         version = self._media_files(version)
 
         return version
-    
+
     def _xml_file(self):
         return []
 
@@ -37,7 +45,7 @@ class JScannerGetversion(AbstractCommand):
         return []
 
     def _media_files(self, version):
-        base_url = self.parentArgs.url
+        base_url = self.parentArgs.url.strip('/') + '/'
 
         with open('data/hashes.json', 'rb') as json_handle:
             hashes = json.load(json_handle)
