@@ -1,3 +1,4 @@
 .idea/
+*.pyc
 import/
 !import/README.md
