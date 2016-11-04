@@ -1,7 +1,10 @@
 import json
 import re
+from collections import OrderedDict
 from hashlib import sha1 as hashlib_sha1
+from math import ceil
 from requests import get as requests_get
+from requests import head as requests_head
 from requests import ConnectionError
 from lib.runner.abstract import AbstractCommand
 
@@ -64,6 +67,28 @@ class JScannerGetversion(AbstractCommand):
         return version
 
     def _sql_files(self):
+        # First of all let's test if we can access the SQL directory
+        base_url = self.parentArgs.url.strip('/') + '/administrator/components/com_admin/sql/updates/mysql/'
+
+        try:
+            response = requests_head(base_url + '3.0.0.sql', verify=False, allow_redirects=True)
+        except ConnectionError:
+            return None
+
+        if response.status_code != 200:
+            return None
+
+        # If I'm here, it means that I can do that, now let's try to detect the correct version
+        with open('data/sql.json', 'rb') as sql_json:
+            sql_versions = json.load(sql_json, object_pairs_hook=OrderedDict)
+
+        sql_lookup = []
+
+        for key, value in sql_versions.iteritems():
+            sql_lookup.append(key)
+
+        filename = self.__iterate_sql_list(sql_lookup)
+
         return []
 
     def _media_files(self, version):
@@ -94,3 +119,30 @@ class JScannerGetversion(AbstractCommand):
                 break
 
         return version
+
+    def __iterate_sql_list(self, sql_lookup):
+        found = False
+        base_url = self.parentArgs.url.strip('/') + '/administrator/components/com_admin/sql/updates/mysql/'
+
+        # Let's find the middle value
+        middle = ((len(sql_lookup) - 1) / 2)
+        filename = sql_lookup[middle]
+
+        try:
+            response = requests_head(base_url + filename, verify=False, allow_redirects=True)
+
+            if response.status_code == 200:
+                found = True
+
+        except ConnectionError:
+            pass
+
+        if found:
+            sql_lookup = sql_lookup[middle + 1:]
+        else:
+            sql_lookup = sql_lookup[:middle]
+
+        if len(sql_lookup) == 1:
+            return sql_lookup.pop()
+
+        return self.__iterate_sql_list(sql_lookup)
