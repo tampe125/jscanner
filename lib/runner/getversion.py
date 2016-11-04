@@ -15,7 +15,9 @@ __license__ = 'GNU GPL version 3 or later'
 
 class JScannerGetversion(AbstractCommand):
     def check(self):
-        # Check if the remote site is online
+        """
+        Checks if the remote site is online
+        """
         try:
             response = requests_get(self.parentArgs.url, verify=False)
         except ConnectionError:
@@ -25,6 +27,10 @@ class JScannerGetversion(AbstractCommand):
             raise Exception("[!] Remote site responded with code: %s" % response.status_code)
 
     def run(self):
+        """
+        Tries several techniques to fetch the version of the remote site
+        :return:
+        """
         print "[*] Analyzing site " + self.parentArgs.url
         print "[*] Trying to get the exact version from the XML file..."
         version = self._xml_file()
@@ -47,6 +53,9 @@ class JScannerGetversion(AbstractCommand):
         print "[+] Detected Joomla! versions: %s" % ', '.join(version)
 
     def _xml_file(self):
+        """
+        Fastest and easiest way: it will check if the XML manifest file is there
+        """
         response = requests_get(self.parentArgs.url.strip('/') + '/administrator/manifests/files/joomla.xml', verify=False)
 
         if response.status_code != 200:
@@ -62,6 +71,10 @@ class JScannerGetversion(AbstractCommand):
         return [version]
 
     def _sql_files(self):
+        """
+        Sometimes the manifest file is removed or missing, let's try to enumerate the possible SQL installation scripts
+        and infer the possible version number
+        """
         # First of all let's test if we can access the SQL directory
         base_url = self.parentArgs.url.strip('/') + '/administrator/components/com_admin/sql/updates/mysql/'
 
@@ -70,6 +83,7 @@ class JScannerGetversion(AbstractCommand):
         except ConnectionError:
             return []
 
+        # Bummer, something went wrong or the site is protected by the a WAF
         if response.status_code != 200:
             return []
 
@@ -77,6 +91,7 @@ class JScannerGetversion(AbstractCommand):
         with open('data/sql.json', 'rb') as sql_json:
             sql_versions = json.load(sql_json, object_pairs_hook=OrderedDict)
 
+        # Let's reverse the order so we can test for the most recent ones first
         sql_versions = OrderedDict(sorted(sql_versions.items(), reverse=True))
         detected_file = []
         excluded_versions = []
@@ -102,6 +117,11 @@ class JScannerGetversion(AbstractCommand):
         return []
 
     def _media_files(self, version):
+        """
+        Tries to detect the installed vesion by using the media files fingerprint
+        :param version:
+        :return:
+        """
         base_url = self.parentArgs.url.strip('/') + '/'
         excluded_versions = []
 
