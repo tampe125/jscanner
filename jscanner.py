@@ -70,7 +70,7 @@ JScanner - What's under the hood?
         try:
             self.checkenv()
         except Exception as error:
-            print error
+            print "[!] " + str(error)
             return
 
         # Let's load the correct object
@@ -78,8 +78,7 @@ JScanner - What's under the hood?
             from lib.runner import getversion
             runner = getversion.JScannerGetversion(self.args)
         else:
-            # TODO Error style
-            print ("Unrecognized command " + self.args.command)
+            print ("[!] Unrecognized command " + self.args.command)
             return
 
         # And away we go!
@@ -88,13 +87,11 @@ JScanner - What's under the hood?
             runner.run()
         # Ehm.. something wrong happened?
         except Exception as error:
-            # TODO Error style
-            print error
+            print "[!] " + str(error)
 
 try:
     scraper = JScanner()
     scraper.run()
 except KeyboardInterrupt:
     print("")
-    # TODO Info style
-    print ("Operation aborted")
+    print ("[*] Operation aborted")

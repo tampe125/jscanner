@@ -19,52 +19,47 @@ class JScannerGetversion(AbstractCommand):
         try:
             response = requests_get(self.parentArgs.url, verify=False)
         except ConnectionError:
-            raise Exception("Could not connect to the remote site")
+            raise Exception("[!] Could not connect to the remote site")
 
         if response.status_code != 200:
-            raise Exception("Remote site responded with code: %s" % response.status_code)
+            raise Exception("[!] Remote site responded with code: %s" % response.status_code)
 
     def run(self):
-        # TODO Info stying
-        print "Trying to get the exact version from the XML file..."
+        print "[*] Analyzing site " + self.parentArgs.url
+        print "[*] Trying to get the exact version from the XML file..."
         version = self._xml_file()
 
         # If we can fetch the XML file, the version is 100% correct
-        if version:
-            return version
+        if not version:
+            print "[*] Trying to detect version using SQL installation files..."
 
-        print "Trying to detect version using SQL installation files..."
+            version = self._sql_files()
 
-        version = self._sql_files()
+            # Still no version or more possible candidates? Time to fingerprint the media files
+            if len(version) != 1:
+                if len(version) > 1:
+                    print "\t[*] Found %d version candidates, trying to find the exact one" % len(version)
 
-        # If we have an exact match, let's return it
-        if len(version) == 1:
-            return version
+                print "[*] Trying to detect version using media file fingerprints..."
+                version = self._media_files(version)
 
-        if len(version) > 1:
-            print "Found %d version candidates, trying to find the exact one" % len(version)
-
-        print "Trying to detect version using media file fingerprints..."
-
-        # Still no version or more possible candidates? Time to fingerprint the media files
-        version = self._media_files(version)
-
-        return version
+        print ""
+        print "[+] Detected Joomla! versions: %s" % ', '.join(version)
 
     def _xml_file(self):
         response = requests_get(self.parentArgs.url.strip('/') + '/administrator/manifests/files/joomla.xml', verify=False)
 
         if response.status_code != 200:
-            return None
+            return []
 
         match = re.search(r'<version>(?P<version>.*?)</version>', response.text)
 
         if not match:
-            return None
+            return []
 
         version = match.groupdict().get('version', None)
 
-        return version
+        return [version]
 
     def _sql_files(self):
         # First of all let's test if we can access the SQL directory
@@ -73,10 +68,10 @@ class JScannerGetversion(AbstractCommand):
         try:
             response = requests_head(base_url + '3.0.0.sql', verify=False, allow_redirects=True)
         except ConnectionError:
-            return None
+            return []
 
         if response.status_code != 200:
-            return None
+            return []
 
         # If I'm here, it means that I can do that, now let's try to detect the correct version
         with open('data/sql.json', 'rb') as sql_json:
@@ -129,8 +124,7 @@ class JScannerGetversion(AbstractCommand):
                 candidates = signatures[digest]
             except KeyError:
                 # This should never happen, but better be safe than sorry
-                # TODO Warning style
-                print "Unknown %s signature for file %s" % (digest, filename)
+                print "\t[!] Unknown %s signature for file %s" % (digest, filename)
                 continue
 
             if len(version) == 0:
