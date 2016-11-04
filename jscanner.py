@@ -1,5 +1,6 @@
 import argparse
 import logging
+import re
 import requests.packages.urllib3
 from requests.packages.urllib3.exceptions import InsecureRequestWarning, InsecurePlatformWarning
 from textwrap import dedent as textwrap_dedent
@@ -41,7 +42,9 @@ JScanner - What's under the hood?
 
         self.args = parser.parse_args()
 
-        # TODO Sanity check on the url (add protocol)
+        # If the url has no protocol I'll add it
+        if re.search(r'http(s?)://', self.args.url) is None:
+            self.args.url = 'http://' + self.args.url
 
         # Let's silence the requests package logger
         logging.getLogger("requests").setLevel(logging.WARNING)
