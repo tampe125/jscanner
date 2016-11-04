@@ -108,6 +108,7 @@ class JScannerGetversion(AbstractCommand):
 
     def _media_files(self, version):
         base_url = self.parentArgs.url.strip('/') + '/'
+        excluded_versions = []
 
         with open('data/hashes.json', 'rb') as json_handle:
             hashes = json.load(json_handle)
@@ -115,6 +116,14 @@ class JScannerGetversion(AbstractCommand):
         for filename, signatures in hashes.iteritems():
             response = requests_get(base_url + filename)
             digest = hashlib_sha1(response.text.encode('utf-8')).hexdigest()
+
+            # Missing files? This reveals A LOT about the version!
+            if response.status_code == 404:
+                for signature, versions in signatures.iteritems():
+                    excluded_versions.extend(versions)
+
+                version = list(set(version) - set(excluded_versions))
+                continue
 
             try:
                 candidates = signatures[digest]
