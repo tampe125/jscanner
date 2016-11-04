@@ -82,12 +82,27 @@ class JScannerGetversion(AbstractCommand):
         with open('data/sql.json', 'rb') as sql_json:
             sql_versions = json.load(sql_json, object_pairs_hook=OrderedDict)
 
-        sql_lookup = []
+        sql_versions = OrderedDict(sorted(sql_versions.items(), reverse=True))
+        detected_file = []
+        excluded_versions = []
 
-        for key, value in sql_versions.iteritems():
-            sql_lookup.append(key)
+        # Let's try from the most recent one until the old ones
+        for filename, versions in sql_versions.iteritems():
+            try:
+                response = requests_head(base_url + filename, verify=False, allow_redirects=True)
+            except ConnectionError:
+                pass
 
-        filename = self.__iterate_sql_list(sql_lookup)
+            if response.status_code == 200:
+                detected_file = filename
+                break
+            else:
+                excluded_versions.extend(versions)
+
+        if detected_file:
+            excluded_versions = set(excluded_versions)
+            candidates = sql_versions.get(detected_file, [])
+            return list(set(candidates) - excluded_versions)
 
         return []
 
@@ -119,30 +134,3 @@ class JScannerGetversion(AbstractCommand):
                 break
 
         return version
-
-    def __iterate_sql_list(self, sql_lookup):
-        found = False
-        base_url = self.parentArgs.url.strip('/') + '/administrator/components/com_admin/sql/updates/mysql/'
-
-        # Let's find the middle value
-        middle = ((len(sql_lookup) - 1) / 2)
-        filename = sql_lookup[middle]
-
-        try:
-            response = requests_head(base_url + filename, verify=False, allow_redirects=True)
-
-            if response.status_code == 200:
-                found = True
-
-        except ConnectionError:
-            pass
-
-        if found:
-            sql_lookup = sql_lookup[middle + 1:]
-        else:
-            sql_lookup = sql_lookup[:middle]
-
-        if len(sql_lookup) == 1:
-            return sql_lookup.pop()
-
-        return self.__iterate_sql_list(sql_lookup)
