@@ -38,42 +38,56 @@ def _translate(versions):
 
 
 def get_vulnerabilities():
-    base_url = 'https://developer.joomla.org/security-centre.html'
-    suffix = ''
+    base_url = 'https://developer.joomla.org'
+    target_url = '/security-centre.html'
+    more = True
 
-    articles = []
-    response = requests_get(base_url, verify=False)
-    raw = response.text
+    while more:
+        articles = []
+        response = requests_get(base_url + target_url, verify=False)
+        soup = BeautifulSoup(response.text, 'lxml')
 
-    articles.extend(BeautifulSoup(raw, 'lxml').select('.blog .items-leading'))
-    articles.extend(BeautifulSoup(raw, 'lxml').select('.blog .items-row'))
+        articles.extend(soup.select('.blog .items-leading'))
+        articles.extend(soup.select('.blog .items-row'))
 
-    for article in articles:
-        info = {}
-        header = article.select('h2').pop().get_text()
-        info['id'] = re.findall('\[(\d{8})\]', header).pop()
-        info['title'] = header.split(' - ', 1).pop().strip()
-        info['descr'] = article.select('h3 + p')[0].get_text()
+        for article in articles:
+            info = {}
+            header = article.select('h2').pop().get_text()
+            info['id'] = re.findall('\[(\d{8})\]', header).pop()
+            info['title'] = header.split(' - ', 1).pop().strip()
+            info['descr'] = article.select('h3 + p')[0].get_text()
 
-        li = article.select('li')
+            li = article.select('li')
 
-        severity = li[2].get_text()
-        severity = severity.split(':').pop().strip()
-        info['severity'] = severity.lower()
+            severity = li[2].get_text()
+            severity = severity.split(':').pop().strip()
+            info['severity'] = severity.lower()
 
-        # This is the hardest thing, since I have to translate an English phrase into code...
-        versions = li[3].get_text()
-        versions = versions.split(':').pop().strip()
-        info['versions'] = _translate(versions)
+            # This is the hardest thing, since I have to translate an English phrase into code...
+            versions = li[3].get_text()
+            versions = versions.split(':').pop().strip()
+            info['versions'] = _translate(versions)
 
-        cve = li[7].get_text()
-        cve = cve.split(':').pop().strip()
+            # Sometimes the CVE info is not there
+            try:
+                cve = li[7].get_text()
+                cve = cve.split(':').pop().strip()
 
-        # For vulnerabilities without a CVE
-        if 'CVE' not in cve:
-            cve = 'N/A'
+                # For vulnerabilities without a CVE
+                if 'CVE' not in cve:
+                    cve = 'N/A'
+            except IndexError:
+                cve = 'N/A'
 
-        info['cve'] = cve.upper()
+            info['cve'] = cve.upper()
+
+        pagination = soup.select('ul.pagination-list li a[title=Next]')
+
+        if not pagination:
+            more = False
+        else:
+            target_url = pagination.pop().get('href')
+
 
 if __name__ == '__main__':
     get_vulnerabilities()
