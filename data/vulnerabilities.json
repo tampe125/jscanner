@@ -1,0 +1,80 @@
+{
+  "20160801": {
+    "cve": "N/A", 
+    "descr": "Inadequate ACL checks in com_content provide potential read access to data which should be access restricted to users with edit_own level.", 
+    "id": "20160801", 
+    "severity": "low", 
+    "title": "Core - ACL Violation", 
+    "versions": [
+      {
+        "max": "3.6.0", 
+        "min": "1.6.0"
+      }
+    ]
+  }, 
+  "20160802": {
+    "cve": "N/A", 
+    "descr": "Inadequate escaping leads to XSS vulnerability in mail component.", 
+    "id": "20160802", 
+    "severity": "low", 
+    "title": "Core - XSS Vulnerability", 
+    "versions": [
+      {
+        "max": "3.6.0", 
+        "min": "1.6.0"
+      }
+    ]
+  }, 
+  "20160803": {
+    "cve": "N/A", 
+    "descr": "Add additional CSRF hardening in com_joomlaupdate.", 
+    "id": "20160803", 
+    "severity": "medium", 
+    "title": "Core - CSRF", 
+    "versions": [
+      {
+        "max": "3.6.0", 
+        "min": "3.6.0"
+      }
+    ]
+  }, 
+  "20161001": {
+    "cve": "CVE-2016-8870", 
+    "descr": "Inadequate checks allows for users to register on a site when registration has been disabled.", 
+    "id": "20161001", 
+    "severity": "high", 
+    "title": "Core - Account Creation", 
+    "versions": [
+      {
+        "max": "3.6.3", 
+        "min": "3.4.4"
+      }
+    ]
+  }, 
+  "20161002": {
+    "cve": "CVE-2016-8869", 
+    "descr": "Incorrect use of unfiltered data allows for users to register on a site with elevated privileges.", 
+    "id": "20161002", 
+    "severity": "high", 
+    "title": "Core - Elevated Privileges", 
+    "versions": [
+      {
+        "max": "3.6.3", 
+        "min": "3.4.4"
+      }
+    ]
+  }, 
+  "20161003": {
+    "cve": "CVE-2016-9081", 
+    "descr": "Incorrect use of unfiltered data allows for existing user accounts to be modified; to include resetting their username, password, and user group assignments.", 
+    "id": "20161003", 
+    "severity": "high", 
+    "title": "Core - Account Modifications", 
+    "versions": [
+      {
+        "max": "3.6.3", 
+        "min": "3.4.4"
+      }
+    ]
+  }
+}

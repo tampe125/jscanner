@@ -1,3 +1,4 @@
+import json
 import re
 from bs4 import BeautifulSoup
 from requests import get as requests_get
@@ -47,6 +48,7 @@ def get_vulnerabilities():
     base_url = 'https://developer.joomla.org'
     target_url = '/security-centre.html'
     more = True
+    vulnerabilities = {}
 
     while more:
         articles = []
@@ -59,7 +61,7 @@ def get_vulnerabilities():
         for article in articles:
             info = {}
             header = article.select('h2').pop().get_text()
-            info['id'] = re.findall('\[(\d{8})\]', header).pop()
+            info['id'] = re.findall('\[(\d{8})\]', header)[0]
             info['title'] = header.split(' - ', 1).pop().strip()
             info['descr'] = article.select('h3 + p')[0].get_text()
 
@@ -86,8 +88,11 @@ def get_vulnerabilities():
                 cve = 'N/A'
 
             info['cve'] = cve.upper()
+            vulnerabilities[info['id']] = info
 
         pagination = soup.select('ul.pagination-list li a[title=Next]')
+        with open('data/vulnerabilities.json', 'wb') as json_file:
+            json.dump(vulnerabilities, json_file, sort_keys=True, indent=2)
 
         if not pagination:
             more = False
