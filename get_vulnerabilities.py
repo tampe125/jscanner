@@ -5,7 +5,13 @@ from requests import get as requests_get
 
 def _translate(versions):
     # First of all let's break the whole string into pieces
-    parts = versions.split(',')
+    # On previous security bulletin we have messages like this: ... and earlier 2.5x versions. 3.0.x ...
+    legacy = re.split('versions\.\s', versions)
+    parts = []
+
+    for item in legacy:
+        parts.extend(re.split(',|;', item))
+
     versions = []
 
     for part in parts:
