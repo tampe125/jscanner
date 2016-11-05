@@ -35,6 +35,19 @@ def _translate(versions):
                 version['min'] = match.group(1)
                 version['max'] = match.group(2)
 
+        # 3.2.5 and earlier 3.x versions |  2.5.24 and (all) earlier 2.5.x versions
+        if not version:
+            match = re.search('(\d\.\d.\d{1,2}) and (?:all )?(?:earlier|previous) (1\.5|1\.5\.x|1\.6\.x|2\.5\.x|3\.x|3\.0\.x)', part)
+            if match:
+                if match.group(2).startswith('1.5'):
+                    min_vers = '1.5.0'
+                elif match.group(2).startswith('2.5'):
+                    min_vers = '2.5.0'
+                else:
+                    min_vers = '3.0.0'
+                version['min'] = min_vers
+                version['max'] = match.group(1)
+
         if version:
             versions.append(version)
         else:
@@ -60,10 +73,11 @@ def get_vulnerabilities():
 
         for article in articles:
             info = {}
-            header = article.select('h2').pop().get_text()
+            header = article.select('h2[itemprop=name]').pop().get_text()
             info['id'] = re.findall('\[(\d{8})\]', header)[0]
             info['title'] = header.split(' - ', 1).pop().strip()
-            info['descr'] = article.select('h3 + p')[0].get_text()
+            descr_header = article(text=re.compile(r'Description')).pop().parent
+            info['descr'] = descr_header.find_next('p').get_text()
 
             li = article.select('li')
 
