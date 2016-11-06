@@ -1,0 +1,1267 @@
+{
+  "20080801": {
+    "cve": "N/A", 
+    "descr": "A flaw in the reset token validation mechanism allows for non-validating tokens to be forged. This will allow an unauthenticated, unauthorized user to reset the password of the first enabled user (lowest id). Typically, this is an administrator user. Note, that changing the first users username may lessen the impact of this exploit (since the person who changed the password does not know the login associated with the new password). However, the only way to completely rectify the issue is to upgrade to 1.5.6 (or patch the /components/com_user/models/reset.php file).", 
+    "id": "20080801", 
+    "severity": "critical", 
+    "title": "Core - Password Remind Functionality", 
+    "versions": [
+      {
+        "max": "1.5.5", 
+        "min": "1.5.0"
+      }
+    ]
+  }, 
+  "20080901": {
+    "cve": "N/A", 
+    "descr": "A flaw in JRequest exists where variables set with JRequest::setVar are not cleaned when fetching the variable at a later point in the request.\u00a0 This can result in variable injection (unwanted characters injected into returned data).", 
+    "id": "20080901", 
+    "severity": "critical", 
+    "title": "Core - JRequest Variable Injection", 
+    "versions": [
+      {
+        "max": "1.5.6", 
+        "min": "1.5.0"
+      }
+    ]
+  }, 
+  "20080902": {
+    "cve": "N/A", 
+    "descr": "A flaw with the random number generation exists which vastly reduces the entropy of system used random functions. This impacts system generated tokens and passwords. The fix increases entropy, and greatly reduces the chance of a generated token being guessed.", 
+    "id": "20080902", 
+    "severity": "high", 
+    "title": "Core - Random Number Generation Flaw", 
+    "versions": [
+      {
+        "max": "1.5.6", 
+        "min": "1.5.0"
+      }
+    ]
+  }, 
+  "20080903": {
+    "cve": "N/A", 
+    "descr": "The mailto component does not verify validity of the\u00a0URL prior to sending.", 
+    "id": "20080903", 
+    "severity": "low", 
+    "title": "Core - com_mailto Spam", 
+    "versions": [
+      {
+        "max": "1.5.6", 
+        "min": "1.5.0"
+      }
+    ]
+  }, 
+  "20080904": {
+    "cve": "N/A", 
+    "descr": "Several components utilize a passed in URL to redirect to after processing.\u00a0 These URLs are not validated prior to the redirect.\u00a0 A crafted URL can cause the system to redirect to a spam or phishing site.", 
+    "id": "20080904", 
+    "severity": "low", 
+    "title": "Core - Redirect Spam", 
+    "versions": [
+      {
+        "max": "1.5.6", 
+        "min": "1.5.0"
+      }
+    ]
+  }, 
+  "20081101": {
+    "cve": "N/A", 
+    "descr": "The defaults on com_content article submission allow entry of dangerous HTML tags (script, etc).\u00a0 This only affects users with access level Author or higher, and only if you have not set filtering options in com_content configuration.", 
+    "id": "20081101", 
+    "severity": "moderate", 
+    "title": "Core - com_content XSS vulnerability", 
+    "versions": [
+      {
+        "max": "1.5.7", 
+        "min": "1.5.0"
+      }
+    ]
+  }, 
+  "20081102": {
+    "cve": "N/A", 
+    "descr": "com_weblinks allows raw HTML into the title and description tags for weblink submissions (from both the administrator and site submission forms).\u00a0", 
+    "id": "20081102", 
+    "severity": "moderate", 
+    "title": "Core - com_weblinks XSS vulnerability", 
+    "versions": [
+      {
+        "max": "1.5.7", 
+        "min": "1.5.0"
+      }
+    ]
+  }, 
+  "20090101": {
+    "cve": "N/A", 
+    "descr": "When running a site under SSL ONLY (the entire site is forced to be under ssl), Joomla! does not set the SSL flag on the cookie.\u00a0 This can allow someone monitoring the network to find the cookie related to the session.\u00a0 Please note that all data is still transferred securely.", 
+    "id": "20090101", 
+    "severity": "low", 
+    "title": "Core - JSession SSL Session Disclosure", 
+    "versions": [
+      {
+        "max": "1.5.8", 
+        "min": "1.5.0"
+      }
+    ]
+  }, 
+  "20090102": {
+    "cve": "N/A", 
+    "descr": "A crafted request can cause disclosure of the directory structure on the server (including any directory that php has access to).", 
+    "id": "20090102", 
+    "severity": "high", 
+    "title": "Core - plg_xstandard Directory Traversal", 
+    "versions": [
+      {
+        "max": "1.5.8", 
+        "min": "1.5.0"
+      }
+    ]
+  }, 
+  "20090301": {
+    "cve": "N/A", 
+    "descr": "A series of XSS and CSRF faults exist in the administrator application.\u00a0 Affected administrator components include com_admin, com_media, com_search.\u00a0 Both com_admin and com_search contain XSS vulnerabilities, and com_media contains 2 CSRF vulnerabilities.\u00a0\u00a0", 
+    "id": "20090301", 
+    "severity": "moderate", 
+    "title": "Core - Multiple XSS/CSRF", 
+    "versions": [
+      {
+        "max": "1.5.9", 
+        "min": "1.5.0"
+      }
+    ]
+  }, 
+  "20090302": {
+    "cve": "N/A", 
+    "descr": "A XSS vulnerability exists in the category view of com_content.", 
+    "id": "20090302", 
+    "severity": "low", 
+    "title": "Core - com_content XSS", 
+    "versions": [
+      {
+        "max": "1.5.9", 
+        "min": "1.5.0"
+      }
+    ]
+  }, 
+  "20090601": {
+    "cve": "N/A", 
+    "descr": "A XSS vulnerability exists in the user view of com_users in the administrator panel.", 
+    "id": "20090601", 
+    "severity": "moderate", 
+    "title": "Core - com_users XSS", 
+    "versions": [
+      {
+        "max": "1.5.10", 
+        "min": "1.5.0"
+      }
+    ]
+  }, 
+  "20090602": {
+    "cve": "N/A", 
+    "descr": "A XSS vulnerability exists in the JA_Purity template which ships with Joomla! 1.5.", 
+    "id": "20090602", 
+    "severity": "moderate", 
+    "title": "Core - ja_purity XSS", 
+    "versions": [
+      {
+        "max": "1.5.10", 
+        "min": "1.5.0"
+      }
+    ]
+  }, 
+  "20090603": {
+    "cve": "N/A", 
+    "descr": "Some values were output from the database without being properly escaped.\u00a0 Most strings in question were sourced from the administrator panel.", 
+    "id": "20090603", 
+    "severity": "low", 
+    "title": "Core - Frontend XSS", 
+    "versions": [
+      {
+        "max": "1.5.10", 
+        "min": "1.5.0"
+      }
+    ]
+  }, 
+  "20090604": {
+    "cve": "N/A", 
+    "descr": "An attacker can inject JavaScript or DHTML code that will be executed in the context of targeted user browser, allowing the attacker to steal cookies. HTTP_REFERER variable is not properly parsed.", 
+    "id": "20090604", 
+    "severity": "moderate", 
+    "title": "Core - Frontend XSS - HTTP_REFERER not properly filtered", 
+    "versions": [
+      {
+        "max": "1.5.11", 
+        "min": "1.5.0"
+      }
+    ]
+  }, 
+  "20090605": {
+    "cve": "N/A", 
+    "descr": "An attacker can inject JavaScript code in a URL that will be executed in the context of targeted user browser.", 
+    "id": "20090605", 
+    "severity": "moderate", 
+    "title": "Core - Frontend XSS - PHP_SELF not properly filtered", 
+    "versions": [
+      {
+        "max": "1.5.11", 
+        "min": "1.5.0"
+      }
+    ]
+  }, 
+  "20090606": {
+    "cve": "N/A", 
+    "descr": "Some files were missing the check for JEXEC.\u00a0 These scripts will then expose internal path information of the host.", 
+    "id": "20090606", 
+    "severity": "moderate", 
+    "title": "Core - Missing JEXEC Check", 
+    "versions": [
+      {
+        "max": "1.5.11", 
+        "min": "1.5.0"
+      }
+    ]
+  }, 
+  "20090722": {
+    "cve": "N/A", 
+    "descr": "Tiny browser included with TinyMCE 3.0 editor allowed files to be uploaded and removed without logging in.", 
+    "id": "20090722", 
+    "severity": "critical", 
+    "title": "Core - File Upload", 
+    "versions": [
+      {
+        "max": "1.5.12", 
+        "min": "1.5.12"
+      }
+    ]
+  }, 
+  "20090723": {
+    "cve": "N/A", 
+    "descr": "In com_mailto, it was possible to bypass timeout protection against sending automated emails.", 
+    "id": "20090723", 
+    "severity": "low", 
+    "title": "Core - com_mailto Timeout Issue", 
+    "versions": [
+      {
+        "max": "1.5.13", 
+        "min": "1.5.0"
+      }
+    ]
+  }, 
+  "20091103": {
+    "cve": "N/A", 
+    "descr": "When logged into the front end with Author access, it was possible to replace an article written by another user.", 
+    "id": "20091103", 
+    "severity": "moderate", 
+    "title": "Core - Front-End Editor Issue", 
+    "versions": [
+      {
+        "max": "1.5.14", 
+        "min": "1.5.0"
+      }
+    ]
+  }, 
+  "20100423": {
+    "cve": "N/A", 
+    "descr": "If a user entered a URL with a negative query limit or offset, a PHP notice would display revealing information about the system.", 
+    "id": "20100423", 
+    "severity": "moderate", 
+    "title": "Core - Negative Values for Limit and Offset", 
+    "versions": [
+      {
+        "max": "1.5.15", 
+        "min": "1.5.0"
+      }
+    ]
+  }, 
+  "20110602": {
+    "cve": "N/A", 
+    "descr": "Inadequate filtering causes possible information disclosure.", 
+    "id": "20110602", 
+    "severity": "low", 
+    "title": "Information Disclosure", 
+    "versions": [
+      {
+        "max": "1.6.3", 
+        "min": "3.0.0"
+      }
+    ]
+  }, 
+  "20110604": {
+    "cve": "N/A", 
+    "descr": "Inadequate filtering leads to XSS vulnerability.", 
+    "id": "20110604", 
+    "severity": "medium", 
+    "title": "XSS Vulnerability", 
+    "versions": [
+      {
+        "max": "1.6.3", 
+        "min": "3.0.0"
+      }
+    ]
+  }, 
+  "20110701": {
+    "cve": "N/A", 
+    "descr": "Inadequate escaping leads to XSS vulnerability.", 
+    "id": "20110701", 
+    "severity": "medium", 
+    "title": "XSS Vulnerability", 
+    "versions": [
+      {
+        "max": "1.6.5", 
+        "min": "3.0.0"
+      }
+    ]
+  }, 
+  "20110901": {
+    "cve": "N/A", 
+    "descr": "Inadequate escaping leads to XSS vulnerability in com_search.", 
+    "id": "20110901", 
+    "severity": "medium", 
+    "title": "Core - XSS Vulnerability", 
+    "versions": []
+  }, 
+  "20110902": {
+    "cve": "N/A", 
+    "descr": "Inadequate escaping leads to XSS vulnerability in back end.", 
+    "id": "20110902", 
+    "severity": "medium", 
+    "title": "Core - XSS Vulnerability", 
+    "versions": []
+  }, 
+  "20110903": {
+    "cve": "N/A", 
+    "descr": "Inadequate error checking causes information disclosure.", 
+    "id": "20110903", 
+    "severity": "low", 
+    "title": "Core - Information Disclosure", 
+    "versions": [
+      {
+        "max": "1.7.0", 
+        "min": "1.7.0"
+      }
+    ]
+  }, 
+  "20111001": {
+    "cve": "N/A", 
+    "descr": "Weak encryption causes potential information disclosure.", 
+    "id": "20111001", 
+    "severity": "moderate", 
+    "title": "Core - Information Disclosure", 
+    "versions": [
+      {
+        "max": "1.7.1", 
+        "min": "1.7.1"
+      }
+    ]
+  }, 
+  "20111002": {
+    "cve": "N/A", 
+    "descr": "Inadequate error checking causes potential information disclosure.", 
+    "id": "20111002", 
+    "severity": "low", 
+    "title": "Core - Information Disclosure", 
+    "versions": [
+      {
+        "max": "1.7.1", 
+        "min": "1.7.1"
+      }
+    ]
+  }, 
+  "20111003": {
+    "cve": "N/A", 
+    "descr": "Weak encryption causes potential information disclosure.", 
+    "id": "20111003", 
+    "severity": "moderate", 
+    "title": "Core - Information Disclosure", 
+    "versions": []
+  }, 
+  "20111101": {
+    "cve": "N/A", 
+    "descr": "Inadequate filtering leads to XSS vulnerability in back end.", 
+    "id": "20111101", 
+    "severity": "medium", 
+    "title": "Core - XSS Vulnerability", 
+    "versions": []
+  }, 
+  "20111102": {
+    "cve": "N/A", 
+    "descr": "Weak random number generation during password reset leads to possibility of changing a user's password.", 
+    "id": "20111102", 
+    "severity": "high", 
+    "title": "Core - Password Change", 
+    "versions": []
+  }, 
+  "20111103": {
+    "cve": "N/A", 
+    "descr": "Weak random number generation during password reset leads to possibility of changing a user's password.", 
+    "id": "20111103", 
+    "severity": "high", 
+    "title": "Core - Password Change", 
+    "versions": [
+      {
+        "max": "1.5.24", 
+        "min": "1.5.0"
+      }
+    ]
+  }, 
+  "20120101": {
+    "cve": "N/A", 
+    "descr": "Inadequate filtering leads to information disclosure.", 
+    "id": "20120101", 
+    "severity": "low", 
+    "title": "Core - Information Disclosure", 
+    "versions": []
+  }, 
+  "20120102": {
+    "cve": "N/A", 
+    "descr": "Inadequate filtering leads to XSS vulnerability.", 
+    "id": "20120102", 
+    "severity": "moderate", 
+    "title": "Core - XSS Vulnerability", 
+    "versions": []
+  }, 
+  "20120103": {
+    "cve": "N/A", 
+    "descr": "Inadequate filtering leads to information disclosure.", 
+    "id": "20120103", 
+    "severity": "low", 
+    "title": "Core - Information Disclosure", 
+    "versions": []
+  }, 
+  "20120104": {
+    "cve": "N/A", 
+    "descr": "Inadequate filtering leads to XSS vulnerability.", 
+    "id": "20120104", 
+    "severity": "moderate", 
+    "title": "Core - XSS Vulnerability", 
+    "versions": []
+  }, 
+  "20120201": {
+    "cve": "N/A", 
+    "descr": "Inadequate validation leads to information disclosure in administrator.", 
+    "id": "20120201", 
+    "severity": "low", 
+    "title": "Core - Information Disclosure", 
+    "versions": []
+  }, 
+  "20120202": {
+    "cve": "N/A", 
+    "descr": "On some servers the error log could be read by unauthorised users.", 
+    "id": "20120202", 
+    "severity": "moderate", 
+    "title": "Core - Information Disclosure", 
+    "versions": []
+  }, 
+  "20120203": {
+    "cve": "N/A", 
+    "descr": "Inadequate validation leads to path disclosure in administrator.", 
+    "id": "20120203", 
+    "severity": "low", 
+    "title": "Core - Information Disclosure", 
+    "versions": []
+  }, 
+  "20120301": {
+    "cve": "N/A", 
+    "descr": "Inadequate escaping leads to SQL injection vulnerability.", 
+    "id": "20120301", 
+    "severity": "high", 
+    "title": "Core - SQL Injection", 
+    "versions": [
+      {
+        "max": "2.5.1", 
+        "min": "2.5.1"
+      }
+    ]
+  }, 
+  "20120302": {
+    "cve": "N/A", 
+    "descr": "Inadequate filtering leads to XSS vulnerability.", 
+    "id": "20120302", 
+    "severity": "moderate", 
+    "title": "Core - XSS Vulnerability", 
+    "versions": []
+  }, 
+  "20120303": {
+    "cve": "N/A", 
+    "descr": "Programming error allows privilege escalation in some cases.", 
+    "id": "20120303", 
+    "severity": "high", 
+    "title": "Core - Privilege Escalation", 
+    "versions": [
+      {
+        "max": "2.5.2", 
+        "min": "2.5.2"
+      }, 
+      {
+        "max": "2.5.1", 
+        "min": "2.5.1"
+      }, 
+      {
+        "max": "2.5.0", 
+        "min": "2.5.0"
+      }
+    ]
+  }, 
+  "20120304": {
+    "cve": "N/A", 
+    "descr": "Insufficient randomness leads to password reset vulnerability.", 
+    "id": "20120304", 
+    "severity": "high", 
+    "title": "Core - Password Change", 
+    "versions": [
+      {
+        "max": "2.5.2", 
+        "min": "2.5.2"
+      }, 
+      {
+        "max": "2.5.1", 
+        "min": "2.5.1"
+      }, 
+      {
+        "max": "2.5.0", 
+        "min": "2.5.0"
+      }
+    ]
+  }, 
+  "20120305": {
+    "cve": "N/A", 
+    "descr": "Insufficient randomness leads to password reset vulnerability.", 
+    "id": "20120305", 
+    "severity": "high", 
+    "title": "Core - Password Change", 
+    "versions": [
+      {
+        "max": "1.5.25", 
+        "min": "1.5.0"
+      }
+    ]
+  }, 
+  "20120306": {
+    "cve": "N/A", 
+    "descr": "Inadequate permission checking allows unauthorised viewing of administrative back end information.", 
+    "id": "20120306", 
+    "severity": "low", 
+    "title": "Core - Information Disclosure", 
+    "versions": [
+      {
+        "max": "1.5.25", 
+        "min": "1.5.0"
+      }
+    ]
+  }, 
+  "20120307": {
+    "cve": "N/A", 
+    "descr": "Inadequate permission checking allows unauthorised viewing of some administrative back end information.", 
+    "id": "20120307", 
+    "severity": "low", 
+    "title": "Core - Information Disclosure", 
+    "versions": [
+      {
+        "max": "2.5.3", 
+        "min": "2.5.0"
+      }
+    ]
+  }, 
+  "20120308": {
+    "cve": "N/A", 
+    "descr": "Inadequate filtering in update manager leads to XSS vulnerability.", 
+    "id": "20120308", 
+    "severity": "low", 
+    "title": "Core - XSS Vulnerability", 
+    "versions": [
+      {
+        "max": "2.5.3", 
+        "min": "2.5.0"
+      }
+    ]
+  }, 
+  "20120601": {
+    "cve": "N/A", 
+    "descr": "Inadequate checking leads to possible user privilege escalation.", 
+    "id": "20120601", 
+    "severity": "medium high", 
+    "title": "Core - Privilege Escalation", 
+    "versions": [
+      {
+        "max": "2.5.4", 
+        "min": "2.5.0"
+      }
+    ]
+  }, 
+  "20120602": {
+    "cve": "N/A", 
+    "descr": "Inadequate filtering leads SQL error and information disclosure.", 
+    "id": "20120602", 
+    "severity": "low", 
+    "title": "Core - Information Disclosure", 
+    "versions": [
+      {
+        "max": "2.5.4", 
+        "min": "2.5.0"
+      }
+    ]
+  }, 
+  "20120901": {
+    "cve": "N/A", 
+    "descr": "Inadequate escaping of output leads to XSS vulnerability.", 
+    "id": "20120901", 
+    "severity": "low", 
+    "title": "Core - XSS Vulnerability", 
+    "versions": [
+      {
+        "max": "2.5.6", 
+        "min": "2.5.0"
+      }
+    ]
+  }, 
+  "20120902": {
+    "cve": "N/A", 
+    "descr": "Inadequate escaping of output leads to XSS vulnerability in language switcher module.", 
+    "id": "20120902", 
+    "severity": "low", 
+    "title": "Core - XSS Vulnerability", 
+    "versions": [
+      {
+        "max": "2.5.6", 
+        "min": "2.5.0"
+      }
+    ]
+  }, 
+  "20121001": {
+    "cve": "N/A", 
+    "descr": "Typographical error leads to XSS vulnerability in language search component.", 
+    "id": "20121001", 
+    "severity": "low", 
+    "title": "Core - XSS Vulnerability", 
+    "versions": [
+      {
+        "max": "3.0.0", 
+        "min": "3.0.0"
+      }
+    ]
+  }, 
+  "20121101": {
+    "cve": "CVE-2012-5827", 
+    "descr": "Inadequate protection leads to clickjacking vulnerability.", 
+    "id": "20121101", 
+    "severity": "moderate", 
+    "title": "Core - Clickjacking", 
+    "versions": []
+  }, 
+  "20121102": {
+    "cve": "CVE-2012-5827", 
+    "descr": "Inadequate protection leads to clickjacking vulnerability.", 
+    "id": "20121102", 
+    "severity": "moderate", 
+    "title": "Core - Clickjacking", 
+    "versions": [
+      {
+        "max": "2.5.7", 
+        "min": "2.5.0"
+      }
+    ]
+  }, 
+  "20130201": {
+    "cve": "CVE-2013-1453", 
+    "descr": "Method of encoding search terms led to possible information disclosure.", 
+    "id": "20130201", 
+    "severity": "low", 
+    "title": "Core - Information Disclosure", 
+    "versions": [
+      {
+        "max": "3.0.2", 
+        "min": "3.0.0"
+      }, 
+      {
+        "max": "2.5.8", 
+        "min": "2.5.0"
+      }
+    ]
+  }, 
+  "20130202": {
+    "cve": "CVE-2013-1455", 
+    "descr": "Undefined variable caused information disclosure in some situations.", 
+    "id": "20130202", 
+    "severity": "low", 
+    "title": "Core - Information Disclosure", 
+    "versions": [
+      {
+        "max": "3.0.2", 
+        "min": "3.0.0"
+      }
+    ]
+  }, 
+  "20130203": {
+    "cve": "CVE-2013-1454", 
+    "descr": "Coding errors led to information disclosure in some situations.", 
+    "id": "20130203", 
+    "severity": "low", 
+    "title": "Core - Information Disclosure", 
+    "versions": [
+      {
+        "max": "3.0.2", 
+        "min": "3.0.0"
+      }
+    ]
+  }, 
+  "20130401": {
+    "cve": "CVE-2013-3056", 
+    "descr": "Inadequate permission checking allows unauthorised user to delete private messages.", 
+    "id": "20130401", 
+    "severity": "low", 
+    "title": "Core - Privilege Escalation", 
+    "versions": [
+      {
+        "max": "2.5.9", 
+        "min": "2.5.0"
+      }, 
+      {
+        "max": "3.0.3", 
+        "min": "3.0.0"
+      }
+    ]
+  }, 
+  "20130402": {
+    "cve": "CVE-2013-3057", 
+    "descr": "Inadequate permission checking allows unauthorised user to see permission settings in some circumstances.", 
+    "id": "20130402", 
+    "severity": "low", 
+    "title": "Core - Information Disclosure", 
+    "versions": [
+      {
+        "max": "2.5.9", 
+        "min": "2.5.0"
+      }, 
+      {
+        "max": "3.0.3", 
+        "min": "3.0.0"
+      }
+    ]
+  }, 
+  "20130403": {
+    "cve": "CVE-2013-3058", 
+    "descr": "Inadequate filtering allows possibility of XSS exploit in some circumstances.", 
+    "id": "20130403", 
+    "severity": "moderate", 
+    "title": "Core - XSS Vulnerability", 
+    "versions": [
+      {
+        "max": "2.5.9", 
+        "min": "2.5.0"
+      }, 
+      {
+        "max": "3.0.3", 
+        "min": "3.0.0"
+      }
+    ]
+  }, 
+  "20130404": {
+    "cve": "N/A", 
+    "descr": "Use of old version of Flash-based file uploader leads to XSS vulnerability.", 
+    "id": "20130404", 
+    "severity": "low", 
+    "title": "Core - XSS Vulnerability", 
+    "versions": [
+      {
+        "max": "2.5.9", 
+        "min": "2.5.0"
+      }, 
+      {
+        "max": "3.0.3", 
+        "min": "3.0.0"
+      }
+    ]
+  }, 
+  "20130405": {
+    "cve": "CVE-2013-3059", 
+    "descr": "Inadequate filtering leads to XSS vulnerability in Voting plugin.", 
+    "id": "20130405", 
+    "severity": "low", 
+    "title": "Core - XSS Vulnerability", 
+    "versions": [
+      {
+        "max": "2.5.9", 
+        "min": "2.5.0"
+      }, 
+      {
+        "max": "3.0.3", 
+        "min": "3.0.0"
+      }
+    ]
+  }, 
+  "20130406": {
+    "cve": "CVE-2013-3242", 
+    "descr": "Object unserialize method leads to possible denial of service vulnerability.", 
+    "id": "20130406", 
+    "severity": "moderate", 
+    "title": "Core - DOS Vulnerability", 
+    "versions": [
+      {
+        "max": "2.5.9", 
+        "min": "2.5.0"
+      }, 
+      {
+        "max": "3.0.3", 
+        "min": "3.0.0"
+      }
+    ]
+  }, 
+  "20130407": {
+    "cve": "CVE-2013-3267", 
+    "descr": "Inadequate filtering leads to XSS vulnerability in highlighter plugin.", 
+    "id": "20130407", 
+    "severity": "low", 
+    "title": "Core - XSS Vulnerability", 
+    "versions": [
+      {
+        "max": "2.5.9", 
+        "min": "2.5.0"
+      }, 
+      {
+        "max": "3.0.3", 
+        "min": "3.0.0"
+      }
+    ]
+  }, 
+  "20130801": {
+    "cve": "N/A", 
+    "descr": "Inadequate filtering leads to the ability to bypass file type upload restrictions.", 
+    "id": "20130801", 
+    "severity": "critical", 
+    "title": "Core - Unauthorised Uploads", 
+    "versions": [
+      {
+        "max": "2.5.13", 
+        "min": "2.5.0"
+      }, 
+      {
+        "max": "3.1.4", 
+        "min": "3.0.0"
+      }
+    ]
+  }, 
+  "20131101": {
+    "cve": "N/A", 
+    "descr": "Inadequate filtering leads to XSS vulnerability in com_contact.", 
+    "id": "20131101", 
+    "severity": "high", 
+    "title": "[20131101] Core XSS Vulnerability", 
+    "versions": [
+      {
+        "max": "2.5.14", 
+        "min": "2.5.0"
+      }, 
+      {
+        "max": "3.1.5", 
+        "min": "3.0.0"
+      }
+    ]
+  }, 
+  "20131102": {
+    "cve": "N/A", 
+    "descr": "Inadequate filtering leads to XSS vulnerability in com_contact, com_weblinks, com_newsfeeds.", 
+    "id": "20131102", 
+    "severity": "moderate", 
+    "title": "[20131102] Core XSS Vulnerability", 
+    "versions": [
+      {
+        "max": "2.5.14", 
+        "min": "2.5.0"
+      }, 
+      {
+        "max": "3.1.5", 
+        "min": "3.0.0"
+      }
+    ]
+  }, 
+  "20131103": {
+    "cve": "N/A", 
+    "descr": "Inadequate filtering leads to XSS vulnerability in com_contact.", 
+    "id": "20131103", 
+    "severity": "moderate", 
+    "title": "[20131103] Core XSS Vulnerability", 
+    "versions": [
+      {
+        "max": "2.5.14", 
+        "min": "2.5.0"
+      }, 
+      {
+        "max": "3.1.5", 
+        "min": "3.0.0"
+      }
+    ]
+  }, 
+  "20140301": {
+    "cve": "N/A", 
+    "descr": "Inadequate escaping leads to SQL injection vulnerability.", 
+    "id": "20140301", 
+    "severity": "high", 
+    "title": "Core - SQL Injection", 
+    "versions": [
+      {
+        "max": "3.2.2", 
+        "min": "3.1.0"
+      }
+    ]
+  }, 
+  "20140302": {
+    "cve": "N/A", 
+    "descr": "Inadequate escaping leads to XSS vulnerability in com_contact.", 
+    "id": "20140302", 
+    "severity": "moderate", 
+    "title": "Core - XSS Vulnerability", 
+    "versions": [
+      {
+        "max": "3.2.2", 
+        "min": "3.1.2"
+      }
+    ]
+  }, 
+  "20140303": {
+    "cve": "N/A", 
+    "descr": "Inadequate escaping leads to XSS vulnerability.", 
+    "id": "20140303", 
+    "severity": "moderate", 
+    "title": "Core - XSS Vulnerability", 
+    "versions": [
+      {
+        "max": "2.5.18", 
+        "min": "2.5.0"
+      }, 
+      {
+        "max": "3.2.2", 
+        "min": "3.0.0"
+      }
+    ]
+  }, 
+  "20140304": {
+    "cve": "N/A", 
+    "descr": "Inadequate\u00a0checking allowed unauthorised logins via GMail authentication.", 
+    "id": "20140304", 
+    "severity": "moderate", 
+    "title": "Core - Unauthorised Logins", 
+    "versions": [
+      {
+        "max": "2.5.18", 
+        "min": "2.5.0"
+      }, 
+      {
+        "max": "3.2.2", 
+        "min": "3.0.0"
+      }
+    ]
+  }, 
+  "20140901": {
+    "cve": "CVE-2014-6631", 
+    "descr": "Inadequate escaping leads to XSS vulnerability in com_media.", 
+    "id": "20140901", 
+    "severity": "moderate", 
+    "title": "Core - XSS Vulnerability", 
+    "versions": [
+      {
+        "max": "3.2.4", 
+        "min": "3.2.0"
+      }, 
+      {
+        "max": "3.3.3", 
+        "min": "3.3.0"
+      }
+    ]
+  }, 
+  "20140902": {
+    "cve": "CVE-2014-6632", 
+    "descr": "Inadequate\u00a0checking allowed unauthorised logins via LDAP authentication.", 
+    "id": "20140902", 
+    "severity": "moderate", 
+    "title": "Core - Unauthorised Logins", 
+    "versions": [
+      {
+        "max": "2.5.24", 
+        "min": "2.5.0"
+      }, 
+      {
+        "max": "3.2.4", 
+        "min": "3.0.0"
+      }, 
+      {
+        "max": "3.3.3", 
+        "min": "3.3.0"
+      }
+    ]
+  }, 
+  "20140903": {
+    "cve": "CVE-2014-7228", 
+    "descr": "Inadequate\u00a0checking allowed the potential for remote files to be executed.", 
+    "id": "20140903", 
+    "severity": "moderate", 
+    "title": "Core - Remote File Inclusion", 
+    "versions": [
+      {
+        "max": "2.5.25", 
+        "min": "2.5.4"
+      }, 
+      {
+        "max": "3.2.5", 
+        "min": "3.0.0"
+      }, 
+      {
+        "max": "3.3.4", 
+        "min": "3.3.0"
+      }
+    ]
+  }, 
+  "20140904": {
+    "cve": "CVE-2014-7229", 
+    "descr": "Inadequate\u00a0checking allowed the potential for a denial of service attack.", 
+    "id": "20140904", 
+    "severity": "low", 
+    "title": "Core - Denial of Service", 
+    "versions": [
+      {
+        "max": "2.5.25", 
+        "min": "2.5.4"
+      }, 
+      {
+        "max": "3.2.5", 
+        "min": "3.0.0"
+      }, 
+      {
+        "max": "3.3.4", 
+        "min": "3.3.0"
+      }
+    ]
+  }, 
+  "20150601": {
+    "cve": "CVE-2015-5608", 
+    "descr": "Inadequate\u00a0checking of the return value allowed to redirect to an external page.", 
+    "id": "20150601", 
+    "severity": "low", 
+    "title": "Core - Open Redirect", 
+    "versions": [
+      {
+        "max": "3.4.1", 
+        "min": "3.0.0"
+      }
+    ]
+  }, 
+  "20150602": {
+    "cve": "CVE-2015-5397", 
+    "descr": "Lack of CSRF checks potentially enabled\u00a0uploading malicious code.", 
+    "id": "20150602", 
+    "severity": "low", 
+    "title": "Core - CSRF Protection", 
+    "versions": [
+      {
+        "max": "3.4.1", 
+        "min": "3.2.0"
+      }
+    ]
+  }, 
+  "20150908": {
+    "cve": "CVE-2015-6939", 
+    "descr": "Inadequate escaping leads to XSS vulnerability in login module.", 
+    "id": "20150908", 
+    "severity": "low", 
+    "title": "Core - XSS Vulnerability", 
+    "versions": [
+      {
+        "max": "3.4.3", 
+        "min": "3.4.0"
+      }
+    ]
+  }, 
+  "20151001": {
+    "cve": "CVE-2015-7297, CVE-2015-7857, CVE-2015-7858", 
+    "descr": "Inadequate filtering of request data leads to a SQL Injection vulnerability.", 
+    "id": "20151001", 
+    "severity": "high", 
+    "title": "Core - SQL Injection", 
+    "versions": [
+      {
+        "max": "3.4.4", 
+        "min": "3.2.0"
+      }
+    ]
+  }, 
+  "20151002": {
+    "cve": "CVE-2015-7859", 
+    "descr": "Inadequate ACL checks in com_contenthistory provide potential read access to data which should be access restricted.", 
+    "id": "20151002", 
+    "severity": "moderate", 
+    "title": "Core - ACL Violations", 
+    "versions": [
+      {
+        "max": "3.4.4", 
+        "min": "3.2.0"
+      }
+    ]
+  }, 
+  "20151201": {
+    "cve": "CVE-2015-8562", 
+    "descr": "Browser information is not filtered properly while saving the session values into the database which leads to a Remote Code Execution vulnerability.", 
+    "id": "20151201", 
+    "severity": "high", 
+    "title": "Core -  Remote Code Execution Vulnerability", 
+    "versions": [
+      {
+        "max": "3.4.5", 
+        "min": "1.5.0"
+      }
+    ]
+  }, 
+  "20151202": {
+    "cve": "CVE-2015-8563", 
+    "descr": "Add additional CSRF hardening in com_templates.", 
+    "id": "20151202", 
+    "severity": "low", 
+    "title": "Core - CSRF Hardening", 
+    "versions": [
+      {
+        "max": "3.4.5", 
+        "min": "3.2.0"
+      }
+    ]
+  }, 
+  "20151203": {
+    "cve": "CVE-2015-8564", 
+    "descr": "Failure to properly sanitise input data from the XML install file located within an extension's package archive allows for directory traversal.", 
+    "id": "20151203", 
+    "severity": "low", 
+    "title": "Core - Directory Traversal", 
+    "versions": [
+      {
+        "max": "3.4.5", 
+        "min": "3.4.0"
+      }
+    ]
+  }, 
+  "20151204": {
+    "cve": "CVE-2015-8565", 
+    "descr": "Inadequate filtering of request data leads to a Directory Traversal vulnerability.", 
+    "id": "20151204", 
+    "severity": "low", 
+    "title": "Core - Directory Traversal", 
+    "versions": [
+      {
+        "max": "3.4.5", 
+        "min": "3.2.0"
+      }
+    ]
+  }, 
+  "20151205": {
+    "cve": "CVE-2015-8566", 
+    "descr": "Browser information is not filtered properly while saving the session values which leads to a Remote Code Execution vulnerability.", 
+    "id": "20151205", 
+    "severity": "high", 
+    "title": "Session - Remote Code Execution Vulnerability", 
+    "versions": [
+      {
+        "max": "1.3.0", 
+        "min": "1.0.0"
+      }
+    ]
+  }, 
+  "20151206": {
+    "cve": "N/A", 
+    "descr": "The Joomla Security Strike team has been following up on the critical security vulnerability patched last week. Since the recent update it has become clear that the root cause is a bug in PHP itself. This was fixed by PHP in September of 2015 with the releases of PHP 5.4.45, 5.5.29, 5.6.13 (Note that this is fixed in all versions of PHP 7 and has been back-ported in some specific Linux LTS versions of PHP 5.3). This fixes the bug across all supported PHP versions.", 
+    "id": "20151206", 
+    "severity": "high", 
+    "title": "Core - Session Hardening", 
+    "versions": [
+      {
+        "max": "3.4.6", 
+        "min": "1.5.0"
+      }
+    ]
+  }, 
+  "20151207": {
+    "cve": "N/A", 
+    "descr": "Inadequate filtering of request data leads to a SQL Injection vulnerability.", 
+    "id": "20151207", 
+    "severity": "low", 
+    "title": "Core - SQL Injection", 
+    "versions": [
+      {
+        "max": "3.4.6", 
+        "min": "3.0.0"
+      }
+    ]
+  }, 
+  "20160801": {
+    "cve": "N/A", 
+    "descr": "Inadequate ACL checks in com_content provide potential read access to data which should be access restricted to users with edit_own level.", 
+    "id": "20160801", 
+    "severity": "low", 
+    "title": "Core - ACL Violation", 
+    "versions": [
+      {
+        "max": "3.6.0", 
+        "min": "1.6.0"
+      }
+    ]
+  }, 
+  "20160802": {
+    "cve": "N/A", 
+    "descr": "Inadequate escaping leads to XSS vulnerability in mail component.", 
+    "id": "20160802", 
+    "severity": "low", 
+    "title": "Core - XSS Vulnerability", 
+    "versions": [
+      {
+        "max": "3.6.0", 
+        "min": "1.6.0"
+      }
+    ]
+  }, 
+  "20160803": {
+    "cve": "N/A", 
+    "descr": "Add additional CSRF hardening in com_joomlaupdate.", 
+    "id": "20160803", 
+    "severity": "medium", 
+    "title": "Core - CSRF", 
+    "versions": [
+      {
+        "max": "3.6.0", 
+        "min": "3.6.0"
+      }
+    ]
+  }, 
+  "20161001": {
+    "cve": "CVE-2016-8870", 
+    "descr": "Inadequate checks allows for users to register on a site when registration has been disabled.", 
+    "id": "20161001", 
+    "severity": "high", 
+    "title": "Core - Account Creation", 
+    "versions": [
+      {
+        "max": "3.6.3", 
+        "min": "3.4.4"
+      }
+    ]
+  }, 
+  "20161002": {
+    "cve": "CVE-2016-8869", 
+    "descr": "Incorrect use of unfiltered data allows for users to register on a site with elevated privileges.", 
+    "id": "20161002", 
+    "severity": "high", 
+    "title": "Core - Elevated Privileges", 
+    "versions": [
+      {
+        "max": "3.6.3", 
+        "min": "3.4.4"
+      }
+    ]
+  }, 
+  "20161003": {
+    "cve": "CVE-2016-9081", 
+    "descr": "Incorrect use of unfiltered data allows for existing user accounts to be modified; to include resetting their username, password, and user group assignments.", 
+    "id": "20161003", 
+    "severity": "high", 
+    "title": "Core - Account Modifications", 
+    "versions": [
+      {
+        "max": "3.6.3", 
+        "min": "3.4.4"
+      }
+    ]
+  }
+}

@@ -1,8 +1,8 @@
 import json
 import re
 from collections import OrderedDict
+from distutils.version import StrictVersion
 from hashlib import sha1 as hashlib_sha1
-from math import ceil
 from requests import get as requests_get
 from requests import head as requests_head
 from requests import ConnectionError
@@ -52,11 +52,48 @@ class JScannerGetversion(AbstractCommand):
         print ""
         print "[+] Detected Joomla! versions: %s" % ', '.join(version)
 
+        self._list_vulnerabilities(version)
+
+    def _list_vulnerabilities(self, remote_versions):
+        if not remote_versions:
+            return
+
+        if len(remote_versions) > 1:
+            print ""
+            print "[!] Multiple version candidates found, displaying all the possible vulnerabilities."
+            print "    PLEASE NOTE: This will likely include false positives"
+            print ""
+
+        with open('data/vulnerabilities.json', 'rb') as vuln_handle:
+            vulnerabilities = json.load(vuln_handle)
+
+        results = []
+
+        for key, vuln in vulnerabilities.iteritems():
+            for versions in vuln['versions']:
+                for remote_version in remote_versions:
+                    if StrictVersion(versions['min']) <= StrictVersion(remote_version) <= StrictVersion(versions['max']):
+                        results.append(vuln)
+                        break
+
+        if not results:
+            print "[!] No known vulnerabilities found"
+
+        print "[+] Found the following vulnerabilities:"
+
+        for result in results:
+            print "\t[%s] - %s" % (result['id'], result['title'])
+            print "\t\t" + result['descr']
+            print "\t\tSeverity: " + result['severity']
+            print "\t\tCVE: " + result['cve']
+            print ""
+
     def _xml_file(self):
         """
         Fastest and easiest way: it will check if the XML manifest file is there
         """
-        response = requests_get(self.parentArgs.url.strip('/') + '/administrator/manifests/files/joomla.xml', verify=False)
+        response = requests_get(self.parentArgs.url.strip('/') + '/administrator/manifests/files/joomla.xml',
+                                verify=False)
 
         if response.status_code != 200:
             return []
