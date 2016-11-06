@@ -40,11 +40,16 @@ JScanner - What's under the hood?
                                        help='URL of the remote site',
                                        required=True)
 
+        subparsers.add_parser('getvuln')
+
         self.args = parser.parse_args()
 
         # If the url has no protocol I'll add it
-        if re.search(r'http(s?)://', self.args.url) is None:
-            self.args.url = 'http://' + self.args.url
+        try:
+            if re.search(r'http(s?)://', self.args.url) is None:
+                self.args.url = 'http://' + self.args.url
+        except AttributeError:
+            pass
 
         # Let's silence the requests package logger
         logging.getLogger("requests").setLevel(logging.WARNING)
@@ -80,6 +85,9 @@ JScanner - What's under the hood?
         if self.args.command == 'getversion':
             from lib.runner import getversion
             runner = getversion.JScannerGetversion(self.args)
+        elif self.args.command == 'getvuln':
+            from lib.runner import getvuln
+            runner = getvuln.JScannerGetvuln(self.args)
         else:
             print ("[!] Unrecognized command " + self.args.command)
             return
