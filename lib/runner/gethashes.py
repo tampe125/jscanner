@@ -1,6 +1,8 @@
 import json
 import os
 import re
+import shutil
+import zipfile
 from lib.runner.abstract import AbstractCommand
 from hashlib import sha1 as hashlib_sha1
 
@@ -18,6 +20,30 @@ class JScannerGethashes(AbstractCommand):
                 hashes = json.load(json_handle)
         except IOError:
             hashes = {}
+
+        # First of all let's see if we have to unpack any zip files:
+        for filename in os.listdir('import'):
+            file_path = 'import/' + filename
+            if not os.path.isfile(file_path):
+                continue
+
+            # Process only ZIP files
+            basename, extension = os.path.splitext(file_path)
+            basename = os.path.basename(basename)
+            target_dir = 'import/' + basename
+
+            if extension != '.zip':
+                continue
+
+            if os.path.isdir(target_dir):
+                shutil.rmtree(target_dir)
+
+            if not os.path.isdir(target_dir):
+                os.makedirs(target_dir)
+
+            zip_ref = zipfile.ZipFile(file_path, 'r')
+            zip_ref.extractall(target_dir)
+            zip_ref.close()
 
         for folder in os.listdir('import'):
             if not os.path.isdir('import/' + folder):

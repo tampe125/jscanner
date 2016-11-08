@@ -33,6 +33,8 @@ JScanner - What's under the hood?
  to display the help for the specific command
         '''))
 
+        # TODO Add better help descriptions
+        # see http://stackoverflow.com/questions/20094215/argparse-subparser-monolithic-help-output
         subparsers = parser.add_subparsers(dest='command')
 
         parser_getversion = subparsers.add_parser('getversion')
