@@ -32,22 +32,27 @@ class JScannerGetversion(AbstractCommand):
         :return:
         """
         print "[*] Analyzing site " + self.parentArgs.url
-        print "[*] Trying to get the exact version from the XML file..."
-        version = self._xml_file()
+
+        version = []
+
+        if self.parentArgs.technique == 'all' or self.parentArgs.technique == 'xml':
+            print "[*] Trying to get the exact version from the XML file..."
+            version = self._xml_file()
 
         # If we can fetch the XML file, the version is 100% correct
         if not version:
-            print "[*] Trying to detect version using SQL installation files..."
-
-            version = self._sql_files()
+            if self.parentArgs.technique == 'all' or self.parentArgs.technique == 'sql':
+                print "[*] Trying to detect version using SQL installation files..."
+                version = self._sql_files()
 
             # Still no version or more possible candidates? Time to fingerprint the media files
-            if len(version) != 1:
-                if len(version) > 1:
-                    print "\t[*] Found %d version candidates, trying to find the exact one" % len(version)
+            if self.parentArgs.technique == 'all' or self.parentArgs.technique == 'media':
+                if len(version) != 1:
+                    if len(version) > 1:
+                        print "\t[*] Found %d version candidates, trying to find the exact one" % len(version)
 
-                print "[*] Trying to detect version using media file fingerprints..."
-                version = self._media_files(version)
+                    print "[*] Trying to detect version using media file fingerprints..."
+                    version = self._media_files(version)
 
         print ""
         print "[+] Detected Joomla! versions: %s" % ', '.join(version)
@@ -166,7 +171,7 @@ class JScannerGetversion(AbstractCommand):
             hashes = json.load(json_handle)
 
         for filename, signatures in hashes.iteritems():
-            response = requests_get(base_url + filename)
+            response = requests_get(base_url + filename, verify=False)
             digest = hashlib_sha1(response.text.encode('utf-8')).hexdigest()
 
             # Missing files? This reveals A LOT about the version!

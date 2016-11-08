@@ -41,6 +41,12 @@ JScanner - What's under the hood?
         parser_getversion.add_argument('-u', '--url',
                                        help='URL of the remote site',
                                        required=True)
+        parser_getversion.add_argument('-t', '--technique',
+                                       help="Force technique to retrieve the remote version",
+                                       required=False,
+                                       choices=['all', 'xml', 'sql', 'media'],
+                                       default="all"
+                                       )
 
         subparsers.add_parser('getvuln',)
         subparsers.add_parser('gethashes')
