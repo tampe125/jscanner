@@ -13,13 +13,18 @@ class JScannerGethashes(AbstractCommand):
 
     def run(self):
         prev_version = ''
-        sign_folders = ['media/media', 'media/system', 'templates']
 
         try:
             with open('data/hashes.json', 'rb') as json_handle:
                 hashes = json.load(json_handle)
         except IOError:
             hashes = {}
+
+        try:
+            with open('data/sql.json', 'rb') as json_handle:
+                sql = json.load(json_handle)
+        except IOError:
+            sql = {}
 
         # First of all let's see if we have to unpack any zip files:
         for filename in os.listdir('import'):
@@ -61,37 +66,73 @@ class JScannerGethashes(AbstractCommand):
                 print "Could not detect Joomla! version for folder: " + folder
                 continue
 
-            for sign_folder in sign_folders:
-                for root, dirs, files in os.walk('import/' + folder + '/' + sign_folder):
-                    for filename in files:
-                        extension = os.path.splitext(filename)[1]
+            if version != prev_version:
+                print "Analyzing version " + version
+                prev_version = version
 
-                        if extension not in ['.js', '.css']:
-                            continue
-
-                        if ('.min.' in filename) or ('-uncompressed' in filename):
-                            continue
-
-                        parts = root.split('/')
-                        path = '/'.join(parts[2:]) + '/' + filename
-
-                        if version != prev_version:
-                            print "Analyzing version " + version
-                            prev_version = version
-
-                        with open(root + '/' + filename, 'rb') as handle:
-                            digest = hashlib_sha1(handle.read()).hexdigest()
-
-                            if hashes.get(path, 'foobar') == 'foobar':
-                                hashes[path] = {}
-
-                            if hashes[path].get(digest, 'foobar') == 'foobar':
-                                hashes[path][digest] = []
-
-                            if version in hashes[path][digest]:
-                                continue
-
-                            hashes[path][digest].append(version)
+            self._media_hashes(version, folder, hashes)
+            self._list_sql(version, folder, sql)
 
         with open('data/hashes.json', 'wb') as handle:
             json.dump(hashes, handle, indent=2, sort_keys=True)
+
+        with open('data/sql.json', 'wb') as handle:
+            json.dump(sql, handle, indent=2, sort_keys=True)
+
+    def _media_hashes(self, version, folder, hashes):
+        sign_folders = ['media/media', 'media/system', 'templates']
+
+        for sign_folder in sign_folders:
+            for root, dirs, files in os.walk('import/' + folder + '/' + sign_folder):
+                for filename in files:
+                    extension = os.path.splitext(filename)[1]
+
+                    if extension not in ['.js', '.css']:
+                        continue
+
+                    if ('.min.' in filename) or ('-uncompressed' in filename):
+                        continue
+
+                    parts = root.split('/')
+                    path = '/'.join(parts[2:]) + '/' + filename
+
+                    with open(root + '/' + filename, 'rb') as handle:
+                        digest = hashlib_sha1(handle.read()).hexdigest()
+
+                        if hashes.get(path, 'foobar') == 'foobar':
+                            hashes[path] = {}
+
+                        if hashes[path].get(digest, 'foobar') == 'foobar':
+                            hashes[path][digest] = []
+
+                        if version in hashes[path][digest]:
+                            continue
+
+                        hashes[path][digest].append(version)
+
+    def _list_sql(self, version, folder, sql):
+        sql_versions = set()
+
+        for filename in os.listdir('import/' + folder + '/administrator/components/com_admin/sql/updates/mysql'):
+            extension = os.path.splitext(filename)[1]
+
+            if extension not in ['.sql']:
+                continue
+
+            if filename.startswith('2.5'):
+                continue
+
+            file_version = re.search(r'(?P<version>\d\.\d\.\d).*?\.sql', filename).groupdict().get('version', '')
+
+            if file_version in sql_versions:
+                continue
+
+            sql_versions.add(file_version)
+
+            if sql.get(filename, 'foobar') == 'foobar':
+                sql[filename] = []
+
+            if version in sql[filename]:
+                continue
+
+            sql[filename].append(version)
