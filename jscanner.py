@@ -33,11 +33,10 @@ JScanner - What's under the hood?
  to display the help for the specific command
         '''))
 
-        # TODO Add better help descriptions
-        # see http://stackoverflow.com/questions/20094215/argparse-subparser-monolithic-help-output
         subparsers = parser.add_subparsers(dest='command')
 
-        parser_getversion = subparsers.add_parser('getversion')
+        get_version_descr = "Detects the Joomla! version of a website"
+        parser_getversion = subparsers.add_parser('getversion', help=get_version_descr, description=get_version_descr)
         parser_getversion.add_argument('-u', '--url',
                                        help='URL of the remote site',
                                        required=True)
@@ -45,11 +44,13 @@ JScanner - What's under the hood?
                                        help="Force technique to retrieve the remote version",
                                        required=False,
                                        choices=['all', 'xml', 'sql', 'media'],
-                                       default="all"
-                                       )
+                                       default="all")
 
-        subparsers.add_parser('getvuln',)
-        subparsers.add_parser('gethashes')
+        get_vuln_descr = "Fetches the list of all vulnerabilities from Joomla! official site"
+        subparsers.add_parser('getvuln', help=get_vuln_descr, description=get_vuln_descr)
+
+        get_hash_descr = "Calculates the hash signature for media files and compiles the list of SQL files"
+        subparsers.add_parser('gethashes', help=get_hash_descr, description=get_hash_descr)
 
         self.args = parser.parse_args()
 
