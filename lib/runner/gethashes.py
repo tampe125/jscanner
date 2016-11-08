@@ -12,7 +12,6 @@ class JScannerGethashes(AbstractCommand):
         return True
 
     def run(self):
-        prev_version = ''
 
         try:
             with open('data/hashes.json', 'rb') as json_handle:
@@ -63,12 +62,10 @@ class JScannerGethashes(AbstractCommand):
                 version = ''
 
             if not version:
-                print "Could not detect Joomla! version for folder: " + folder
+                print "[!] Could not detect Joomla! version for folder: " + folder
                 continue
 
-            if version != prev_version:
-                print "Analyzing version " + version
-                prev_version = version
+            print "[*] Analyzing folder " + folder
 
             self._media_hashes(version, folder, hashes)
             self._list_sql(version, folder, sql)
@@ -80,6 +77,8 @@ class JScannerGethashes(AbstractCommand):
             json.dump(sql, handle, indent=2, sort_keys=True)
 
     def _media_hashes(self, version, folder, hashes):
+        print "\t[*] Creating hash signature for media files"
+
         sign_folders = ['media/media', 'media/system', 'templates']
 
         for sign_folder in sign_folders:
@@ -111,6 +110,7 @@ class JScannerGethashes(AbstractCommand):
                         hashes[path][digest].append(version)
 
     def _list_sql(self, version, folder, sql):
+        print "\t[*] Creating list of SQL files"
         sql_versions = set()
 
         for filename in os.listdir('import/' + folder + '/administrator/components/com_admin/sql/updates/mysql'):
