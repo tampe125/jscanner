@@ -40,7 +40,8 @@ JScanner - What's under the hood?
                                        help='URL of the remote site',
                                        required=True)
 
-        subparsers.add_parser('getvuln')
+        subparsers.add_parser('getvuln',)
+        subparsers.add_parser('gethashes')
 
         self.args = parser.parse_args()
 
@@ -88,6 +89,9 @@ JScanner - What's under the hood?
         elif self.args.command == 'getvuln':
             from lib.runner import getvuln
             runner = getvuln.JScannerGetvuln(self.args)
+        elif self.args.command == 'gethashes':
+            from lib.runner import gethashes
+            runner = gethashes.JScannerGethashes(self.args)
         else:
             print ("[!] Unrecognized command " + self.args.command)
             return
