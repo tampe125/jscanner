@@ -35,16 +35,16 @@ JScanner - What's under the hood?
 
         subparsers = parser.add_subparsers(dest='command')
 
-        get_version_descr = "Detects the Joomla! version of a website"
-        parser_getversion = subparsers.add_parser('getversion', help=get_version_descr, description=get_version_descr)
-        parser_getversion.add_argument('-u', '--url',
-                                       help='URL of the remote site',
-                                       required=True)
-        parser_getversion.add_argument('-t', '--technique',
-                                       help="Force technique to retrieve the remote version",
-                                       required=False,
-                                       choices=['all', 'xml', 'sql', 'media'],
-                                       default="all")
+        analyze_descr = "Analyze target Joomla! installation"
+        parser_analyze = subparsers.add_parser('analyze', help=analyze_descr, description=analyze_descr)
+        parser_analyze.add_argument('-u', '--url',
+                                    help='URL of the remote site',
+                                    required=True)
+        parser_analyze.add_argument('-t', '--technique',
+                                    help="Force technique to retrieve the remote version",
+                                    required=False,
+                                    choices=['all', 'xml', 'sql', 'media'],
+                                    default="all")
 
         get_vuln_descr = "Fetches the list of all vulnerabilities from Joomla! official site"
         subparsers.add_parser('getvuln', help=get_vuln_descr, description=get_vuln_descr)
@@ -92,9 +92,9 @@ JScanner - What's under the hood?
             return
 
         # Let's load the correct object
-        if self.args.command == 'getversion':
-            from lib.runner import getversion
-            runner = getversion.JScannerGetversion(self.args)
+        if self.args.command == 'analyze':
+            from lib.runner import analyze
+            runner = analyze.JScannerAnalyze(self.args)
         elif self.args.command == 'getvuln':
             from lib.runner import getvuln
             runner = getvuln.JScannerGetvuln(self.args)

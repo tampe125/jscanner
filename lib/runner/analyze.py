@@ -13,7 +13,7 @@ __copyright__ = '2016 Davide Tampellini - FabbricaBinaria'
 __license__ = 'GNU GPL version 3 or later'
 
 
-class JScannerGetversion(AbstractCommand):
+class JScannerAnalyze(AbstractCommand):
     def check(self):
         """
         Checks if the remote site is online
