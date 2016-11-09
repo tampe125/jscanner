@@ -1,5 +1,5 @@
 # JScanner
-Detect the installed Joomla! version on a remote site using several different techniques.
+Analyze target Joomla! installation using several different techniques.
 
 ## Why another tool?
 Currently there are several tools that will detect the installed Joomla! version, you have online resources and even a Metasploit auxiliary module. However they perform a very simply check: they try to download the manifest file of Joomla! and read the version inside it.  
@@ -14,7 +14,7 @@ JScanner will try several ways:
 
 ## Usage
 ```
-python jscanner.py getversion -u http://www.example.com
+python jscanner.py analyze -u http://www.example.com
 
 JScanner 1.0.0 - What's under the hood?
 Copyright (C) 2016 FabbricaBinaria - Davide Tampellini
