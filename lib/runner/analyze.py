@@ -55,7 +55,7 @@ class JScannerAnalyze(AbstractCommand):
                     version = self._media_files(version)
 
         print ""
-        print "[+] Detected Joomla! versions: %s" % ', '.join(version)
+        print "[+] Detected Joomla! version(s): %s" % ', '.join(version)
 
         self._list_vulnerabilities(version)
 
@@ -83,6 +83,7 @@ class JScannerAnalyze(AbstractCommand):
 
         if not results:
             print "[!] No known vulnerabilities found"
+            return
 
         print "[+] Found the following vulnerabilities:"
 
