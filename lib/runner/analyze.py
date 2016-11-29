@@ -126,7 +126,7 @@ class JScannerAnalyze(AbstractCommand):
         except ConnectionError:
             return []
 
-        # Bummer, something went wrong or the site is protected by the a WAF
+        # Bummer, something went wrong or the site is protected by a WAF
         if response.status_code != 200:
             return []
 
@@ -139,7 +139,7 @@ class JScannerAnalyze(AbstractCommand):
         detected_file = []
         excluded_versions = []
 
-        # Let's try from the most recent one until the old ones
+        # Let's try from the most recent until the oldest
         for filename, versions in sql_versions.iteritems():
             try:
                 response = requests_head(base_url + filename, verify=False, allow_redirects=True)
@@ -161,7 +161,7 @@ class JScannerAnalyze(AbstractCommand):
 
     def _media_files(self, version):
         """
-        Tries to detect the installed vesion by using the media files fingerprint
+        Tries to detect the installed version by using the media files fingerprint
         :param version:
         :return:
         """
