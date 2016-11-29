@@ -9,7 +9,7 @@ Sadly this method is not very reliable: such XML file could (and will) be delete
 JScanner will try several ways:
 
 1. **Read the `joomla.xml` manifest file** 100% accuracy, but usually this file is missing or blocked
-2. **Scan `com_admin` folder for SQL files** Every Joomla! version ships with a different SQL files for updateds. By checking their presence, JScanner can build a list of possible candidates
+2. **Scan `com_admin` folder for SQL files** Every Joomla! version ships with a different SQL files for updates. By checking their presence, JScanner can build a list of possible candidates
 3. **Fingerprint media files** If everything fails, we can still try to fetch media files. For each version, a signature has been generated and we are going to compare it vs the remote source.
 
 ## Usage
@@ -33,4 +33,4 @@ license. See http://www.gnu.org/licenses/gpl-3.0.html for details.
 ```
 
 ## Known issues
-Currently JScanner works only vs version 3.x of Joomla!. More versions could be added in the future.
+Currently JScanner works only on version 3.x of Joomla!. More versions could be added in the future.
