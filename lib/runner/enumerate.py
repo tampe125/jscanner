@@ -13,12 +13,28 @@ class JScannerEnumerate(RemoteCommand):
     def run(self):
         base_url = self.parentArgs.url.strip('/') + '/index.php?option=com_users&task=registration.register'
 
-        # First of all I have to extract the token and the current cookie
-        print "[*] Trying to fetch CSRF token"
+        # First of all let's check if user registration is enabled
+        print "[*] Checking if user registration is enabled"
+
         response = requests.get(self.parentArgs.url.strip('/') + '/index.php?option=com_users&view=registration')
         cookies = response.cookies
 
-        matches = re.findall(r'type="hidden"\s?name="(.{32})"\svalue="1"', response.content)
+        if not cookies:
+            print "[!] Redirect found. Requests package has some issues with redirects and cookies, so you could get " \
+                  "wrong results"
+            cookies = response.history[0].cookies
+
+        content = response.content
+
+        if 'jform[email1]' not in content:
+            print "[!] User registration is disabled. Can't continue"
+            return
+
+        print "[+] User registration seems enabled"
+
+        # I have to extract the token and the current cookie
+        print "[*] Trying to fetch CSRF token"
+        matches = re.findall(r'type="hidden"\s?name="(.{32})"\svalue="1"', content)
 
         if not matches:
             print "[!] Could not find the CSRF token value"
