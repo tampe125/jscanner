@@ -110,6 +110,9 @@ JScanner - What's under the hood?
         if self.args.command == 'analyze':
             from lib.runner import analyze
             runner = analyze.JScannerAnalyze(self.args)
+        elif self.args.command == 'enumerate':
+            from lib.runner import enumerate
+            runner = enumerate.JScannerEnumerate(self.args)
         elif self.args.command == 'getvuln':
             from lib.runner import getvuln
             runner = getvuln.JScannerGetvuln(self.args)
