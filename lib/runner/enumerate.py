@@ -58,8 +58,12 @@ class JScannerEnumerate(RemoteCommand):
 
             response = requests.post(base_url, payload, cookies=cookies)
 
-            if 'The username you entered is not available' in response.text:
-                print "[+] Found used %s: %s" % (current_test, candidate)
+            if current_test == 'username':
+                if 'The username you entered is not available' in response.text:
+                    print "[+] Found used username: %s" % candidate
+            elif current_test == 'email':
+                if 'The email address you entered is already in use or invalid' in response.text:
+                    print "[+] Found used email: %s" % candidate
 
     def _random_chars(self, size):
         chars = string.ascii_letters + string.digits

@@ -15,6 +15,8 @@ class RemoteCommand(AbstractCommand):
         """
         Checks if the remote site is online
         """
+        print "[*] Checking if URL %s is online" % self.parentArgs.url
+
         try:
             response = requests_get(self.parentArgs.url, verify=False)
         except ConnectionError:
@@ -22,3 +24,5 @@ class RemoteCommand(AbstractCommand):
 
         if response.status_code != 200:
             raise Exception("[!] Remote site responded with code: %s" % response.status_code)
+
+        print "[+] Site %s seems online" % self.parentArgs.url
