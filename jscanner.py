@@ -18,7 +18,7 @@ class JScanner:
         requests.packages.urllib3.disable_warnings(InsecurePlatformWarning)
 
         self.settings = None
-        self.version = '1.0.0'
+        self.version = '1.1.0'
 
         parser = argparse.ArgumentParser(formatter_class=argparse.RawDescriptionHelpFormatter,
                                          description=textwrap_dedent('''
