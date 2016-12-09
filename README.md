@@ -32,5 +32,27 @@ license. See http://www.gnu.org/licenses/gpl-3.0.html for details.
 [+] Detected Joomla! versions: 3.6.3, 3.6.4
 ```
 
+## Other commands
+#### Enumerate users and email address
+Given a list of usernames or email addresses, you can check if they are actually used on target website (requires user registration being enabled).  
+```
+python jscanner.py enumerate -u localhost/vergine -U users.txt 
+JScanner 1.1.0 - What's under the hood?
+Copyright (C) 2016 FabbricaBinaria - Davide Tampellini
+===============================================================================
+JScanner is Free Software, distributed under the terms of the GNU General
+Public License version 3 or, at your option, any later version.
+This program comes with ABSOLUTELY NO WARRANTY as per sections 15 & 16 of the
+license. See http://www.gnu.org/licenses/gpl-3.0.html for details.
+===============================================================================
+[*] Checking if URL http://www.example.com is online
+[+] Site http://www.example.com seems online
+[*] Checking if user registration is enabled
+[+] User registration seems enabled
+[*] Trying to fetch CSRF token
+[*] Got CSRF token: 2f48a75c99e06d8723396c14ff2c2884
+[*] Trying to fetch username usage
+[+] Found used username: admin
+```
 ## Known issues
 Currently JScanner works only on version 3.x of Joomla!. More versions could be added in the future.
