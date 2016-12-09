@@ -33,7 +33,7 @@ license. See http://www.gnu.org/licenses/gpl-3.0.html for details.
 ```
 
 ## Other commands
-#### Enumerate users and email address
+#### Enumerate users and email addresses
 Given a list of usernames or email addresses, you can check if they are actually used on target website (requires user registration being enabled).  
 ```
 python jscanner.py enumerate -u localhost/vergine -U users.txt 
