@@ -25,11 +25,11 @@ class JScanner:
 JScanner - What's under the hood?
  This is the main entry point of JScanner, where you can perform all the actions.
  Type:
-    jscanner [command] [options]
+    jscanner.py [command] [options]
  to run a specific command
 
  Type:
-    jscanner [command] -h
+    jscanner.py [command] -h
  to display the help for the specific command
         '''))
 
@@ -46,7 +46,7 @@ JScanner - What's under the hood?
                                     choices=['all', 'xml', 'sql', 'media'],
                                     default="all")
 
-        enumerate_descr = "Enumerates available usernames or emails"
+        enumerate_descr = "Enumerates registered usernames or emails"
         parser_enumerate = subparsers.add_parser('enumerate', help=enumerate_descr, description=enumerate_descr)
         parser_enumerate.add_argument('-u', '--url',
                                       help='URL of the remote site',
