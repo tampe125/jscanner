@@ -6,7 +6,7 @@ from requests.packages.urllib3.exceptions import InsecureRequestWarning, Insecur
 from textwrap import dedent as textwrap_dedent
 
 __author__ = 'Davide Tampellini'
-__copyright__ = '2015 Davide Tampellini - FabbricaBinaria'
+__copyright__ = '2016 Davide Tampellini - FabbricaBinaria'
 __license__ = 'GNU GPL version 3 or later'
 
 
@@ -18,18 +18,18 @@ class JScanner:
         requests.packages.urllib3.disable_warnings(InsecurePlatformWarning)
 
         self.settings = None
-        self.version = '1.0.0'
+        self.version = '1.1.0'
 
         parser = argparse.ArgumentParser(formatter_class=argparse.RawDescriptionHelpFormatter,
                                          description=textwrap_dedent('''
 JScanner - What's under the hood?
  This is the main entry point of JScanner, where you can perform all the actions.
  Type:
-    jscanner [command] [options]
+    jscanner.py [command] [options]
  to run a specific command
 
  Type:
-    jscanner [command] -h
+    jscanner.py [command] -h
  to display the help for the specific command
         '''))
 
@@ -45,6 +45,21 @@ JScanner - What's under the hood?
                                     required=False,
                                     choices=['all', 'xml', 'sql', 'media'],
                                     default="all")
+
+        enumerate_descr = "Enumerates registered usernames or emails"
+        parser_enumerate = subparsers.add_parser('enumerate', help=enumerate_descr, description=enumerate_descr)
+        parser_enumerate.add_argument('-u', '--url',
+                                      help='URL of the remote site',
+                                      required=True)
+
+        enumerate_group = parser_enumerate.add_mutually_exclusive_group(required=True)
+        enumerate_group.add_argument('-U', '--users',
+                                     help='File containing the list of users to test',
+                                     type=argparse.FileType('r'))
+
+        enumerate_group.add_argument('-e', '--emails',
+                                     help='File containing the list of emails to test',
+                                     type=argparse.FileType('r'))
 
         get_vuln_descr = "Fetches the list of all vulnerabilities from Joomla! official site"
         subparsers.add_parser('getvuln', help=get_vuln_descr, description=get_vuln_descr)
@@ -95,6 +110,9 @@ JScanner - What's under the hood?
         if self.args.command == 'analyze':
             from lib.runner import analyze
             runner = analyze.JScannerAnalyze(self.args)
+        elif self.args.command == 'enumerate':
+            from lib.runner import enumerate
+            runner = enumerate.JScannerEnumerate(self.args)
         elif self.args.command == 'getvuln':
             from lib.runner import getvuln
             runner = getvuln.JScannerGetvuln(self.args)
