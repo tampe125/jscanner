@@ -1263,5 +1263,52 @@
         "min": "3.4.4"
       }
     ]
+  }, 
+  "20161201": {
+    "cve": "CVE-2016-9838", 
+    "descr": "Incorrect use of unfiltered data stored to the session on a form validation failure allows for existing user accounts to be modified; to include resetting their username, password, and user group assignments.", 
+    "id": "20161201", 
+    "severity": "high", 
+    "title": "Core - Elevated Privileges", 
+    "versions": [
+      {
+        "max": "3.6.4", 
+        "min": "1.6.0"
+      }
+    ]
+  }, 
+  "20161202": {
+    "cve": "CVE-2016-9836", 
+    "descr": "Inadequate filesystem checks allowed files with alternative PHP file extensions to be uploaded.", 
+    "id": "20161202", 
+    "severity": "low", 
+    "title": "Core - Shell Upload", 
+    "versions": [
+      {
+        "max": "3.6.4", 
+        "min": "3.0.0"
+      }
+    ]
+  }, 
+  "20161203": {
+    "cve": "CVE-2016-9837", 
+    "descr": "Inadequate ACL checks in the Beez3 com_content article layout override enables a user to view restricted content.", 
+    "id": "20161203", 
+    "severity": "low", 
+    "title": "Core - Information Disclosure", 
+    "versions": [
+      {
+        "max": "3.6.4", 
+        "min": "3.0.0"
+      }
+    ]
+  }, 
+  "20161204": {
+    "cve": "N/A", 
+    "descr": "Joomla! 3.6.5 includes additional security hardening mechanisms prepared by the JSST, thanks in part to issue reports from Fotis Evangelou and Nicholas Dionysopoulos, which restricts a user's ability to make potentially damaging configuration changes. This includes restricting the ability to set the \"New User Registration Group\" and \"Guest User Group\" to a group with Super User permissions and restricting the ability for a lesser privileged user to make user group assignment changes to users in a Super User group.", 
+    "id": "20161204", 
+    "severity": "n/a", 
+    "title": "Misc. Security Hardening", 
+    "versions": []
   }
 }
