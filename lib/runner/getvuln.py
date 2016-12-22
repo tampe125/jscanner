@@ -37,14 +37,22 @@ class JScannerGetvuln(AbstractCommand):
 
                 li = article.select('li')
 
-                severity = li[2].get_text()
-                severity = severity.split(':').pop().strip()
+                # In some cases we could not have the severity
+                try:
+                    severity = li[2].get_text()
+                    severity = severity.split(':').pop().strip()
+                except IndexError:
+                    severity = 'n/a'
+
                 info['severity'] = severity.lower()
 
                 # This is the hardest thing, since I have to translate an English phrase into code...
-                versions = li[3].get_text()
-                versions = versions.split(':').pop().strip()
-                info['versions'] = self._translate(versions)
+                try:
+                    versions = li[3].get_text()
+                    versions = versions.split(':').pop().strip()
+                    info['versions'] = self._translate(versions)
+                except IndexError:
+                    info['versions'] = []
 
                 # Sometimes the CVE info is not there
                 try:
