@@ -2,7 +2,6 @@ import argparse
 import logging
 import re
 import requests.packages.urllib3
-from requests.packages.urllib3.exceptions import InsecureRequestWarning, InsecurePlatformWarning
 from textwrap import dedent as textwrap_dedent
 
 __author__ = 'Davide Tampellini'
@@ -14,11 +13,20 @@ class JScanner:
     def __init__(self):
 
         # Disable warnings about SSL connections
-        requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
-        requests.packages.urllib3.disable_warnings(InsecurePlatformWarning)
+        try:
+            from requests.packages.urllib3.exceptions import InsecureRequestWarning
+            requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
+        except ImportError:
+            pass
+
+        try:
+            from requests.packages.urllib3.exceptions import InsecurePlatformWarning
+            requests.packages.urllib3.disable_warnings(InsecurePlatformWarning)
+        except ImportError:
+            pass
 
         self.settings = None
-        self.version = '1.1.0'
+        self.version = '1.1.1'
 
         parser = argparse.ArgumentParser(formatter_class=argparse.RawDescriptionHelpFormatter,
                                          description=textwrap_dedent('''
