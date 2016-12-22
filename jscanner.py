@@ -26,7 +26,7 @@ class JScanner:
             pass
 
         self.settings = None
-        self.version = '1.1.0'
+        self.version = '1.1.1'
 
         parser = argparse.ArgumentParser(formatter_class=argparse.RawDescriptionHelpFormatter,
                                          description=textwrap_dedent('''
