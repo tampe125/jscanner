@@ -3,7 +3,8 @@
     "08dac19f39abe3addd5e53049c8e08d1053b88a8": [
       "3.6.4", 
       "3.6.3", 
-      "3.6.5"
+      "3.6.5", 
+      "3.7.0"
     ], 
     "16782ae0481bdc899b3d990761cbc46597878689": [
       "3.5.0", 
@@ -23,6 +24,9 @@
       "3.6.2", 
       "3.6.3", 
       "3.6.5"
+    ], 
+    "241f3f204aeb9a5854fda01a98ba5045ff4fd63d": [
+      "3.7.0"
     ], 
     "5db3e20ee0736e6177b3dfdb634adbbd8869b63a": [
       "3.2.0", 
@@ -78,6 +82,9 @@
       "3.4.7", 
       "3.4.8", 
       "3.4.2"
+    ], 
+    "6e0d0ebb53ba579134a64c3ad440b6e989c5944d": [
+      "3.7.0"
     ], 
     "86bf95c8d519e12a413e58d78102b2e8ed5aceae": [
       "3.3.0", 
@@ -173,9 +180,15 @@
       "3.1.4", 
       "3.1.5", 
       "3.1.6"
+    ], 
+    "d0b57be08ff95bc3bc4020f0de8a52b2c2e4bb6d": [
+      "3.7.0"
     ]
   }, 
   "media/media/css/medialist-thumbs_rtl.css": {
+    "0083c15300ee2820b55d2450b74cc2d2c3c822b0": [
+      "3.7.0"
+    ], 
     "4578420a98eda7fc591f439f0688fc36cf4085d7": [
       "3.2.0", 
       "3.2.1", 
@@ -251,6 +264,9 @@
       "3.5.0", 
       "3.5.1"
     ], 
+    "98d02f72d9b91ada1e69da34dd8d4238b0a36060": [
+      "3.7.0"
+    ], 
     "a0447ff69f1daadc62d3efbd5c425db4d65cead7": [
       "3.4.0", 
       "3.4.1", 
@@ -286,6 +302,9 @@
     ]
   }, 
   "media/media/css/mediamanager_rtl.css": {
+    "506bd7f6a6ee66208d0d03d539bb53da1e4c6b35": [
+      "3.7.0"
+    ], 
     "701268ccf431d5c4b6f39cc4b456ddc9e511047d": [
       "3.3.0", 
       "3.3.1", 
@@ -348,7 +367,8 @@
       "3.6.1", 
       "3.6.2", 
       "3.6.3", 
-      "3.6.5"
+      "3.6.5", 
+      "3.7.0"
     ]
   }, 
   "media/media/css/popup-imagelist.css": {
@@ -393,6 +413,9 @@
       "3.4.7", 
       "3.4.8", 
       "3.4.2"
+    ], 
+    "a13f051c935a1f1e36f2e1783731f61ae237b7cc": [
+      "3.7.0"
     ], 
     "c61104e637e90eb00387b9eafce5444b0bc88dd9": [
       "3.6.4", 
@@ -441,6 +464,9 @@
       "3.4.8", 
       "3.4.2"
     ], 
+    "ba56d4ddd8601efb787698f4abeef00e40b19cd9": [
+      "3.7.0"
+    ], 
     "bb2e1308b5b964f2cf1ab9132ec427ed13a9eb47": [
       "3.2.0", 
       "3.2.1", 
@@ -473,6 +499,9 @@
       "3.2.5", 
       "3.2.6", 
       "3.2.7"
+    ], 
+    "56fa4f7c63a6cad9fa7f1bc5d5e74b33d4afbbcc": [
+      "3.7.0"
     ], 
     "5d8002344d85b12a181cacd12fd14187be605452": [
       "3.4.0", 
@@ -516,6 +545,9 @@
     ]
   }, 
   "media/media/css/popup-imagemanager_rtl.css": {
+    "0fc694c88edfd49c872ab578338f27f3c5b22b37": [
+      "3.7.0"
+    ], 
     "2fc824ddd2bdafce3e71f8c1a92bfbd8cb88cd6e": [
       "3.2.0", 
       "3.2.1", 
@@ -573,7 +605,8 @@
     "32f6d563611a5092973859cd061902f5d102f796": [
       "3.6.4", 
       "3.6.3", 
-      "3.6.5"
+      "3.6.5", 
+      "3.7.0"
     ], 
     "781e95ef042b5214a725669101fdf087d807b187": [
       "3.6.0", 
@@ -594,7 +627,8 @@
       "3.6.1", 
       "3.6.2", 
       "3.6.3", 
-      "3.6.5"
+      "3.6.5", 
+      "3.7.0"
     ]
   }, 
   "media/media/js/mediafield.js": {
@@ -607,6 +641,9 @@
       "3.6.2", 
       "3.6.3", 
       "3.6.5"
+    ], 
+    "d57b3d53e56d53bae4af6ef375d1ecebd21cd55f": [
+      "3.7.0"
     ]
   }, 
   "media/media/js/mediamanager.js": {
@@ -657,6 +694,9 @@
       "3.4.6", 
       "3.4.7", 
       "3.4.8"
+    ], 
+    "9ddee4a90cb80625c490ae867ad2e607c3542499": [
+      "3.7.0"
     ], 
     "b78f8591af84e64a829ab5550d38fad6c8579ae8": [
       "3.3.1", 
@@ -719,6 +759,9 @@
       "3.2.0", 
       "3.2.1"
     ], 
+    "add4ed9404baf8280cf265d0acf1a55d9bd097a4": [
+      "3.7.0"
+    ], 
     "e02287598b191d56539372438f0e4d7c24dec1c1": [
       "3.6.4", 
       "3.5.0", 
@@ -778,6 +821,9 @@
       "3.4.0", 
       "3.4.1"
     ], 
+    "987699e1b7b688c94a3379a620e07ad33614e678": [
+      "3.7.0"
+    ], 
     "a52dd6af00b99967b3ba227005c7d6e7d775c228": [
       "3.3.0", 
       "3.3.1", 
@@ -819,6 +865,9 @@
       "3.1.0", 
       "3.1.1"
     ], 
+    "3a8da636d6fc3961e6288206466e0481710e18a4": [
+      "3.7.0"
+    ], 
     "64d70adbe671e3afe679314b57b21294d6584426": [
       "3.4.0", 
       "3.4.1", 
@@ -847,6 +896,16 @@
       "3.6.2", 
       "3.6.3", 
       "3.6.5"
+    ]
+  }, 
+  "media/system/css/fields/calendar-rtl.css": {
+    "d2d62d3b9be417ab1dd7d2d7dc021ad8a9730a7a": [
+      "3.7.0"
+    ]
+  }, 
+  "media/system/css/fields/calendar.css": {
+    "953a3e4cc4b99c71a37cef9833938cbb85739e55": [
+      "3.7.0"
     ]
   }, 
   "media/system/css/frontediting.css": {
@@ -888,6 +947,9 @@
     "af0de432f63e91f917c4e207c6cebea7abb2fd37": [
       "3.2.0", 
       "3.2.1"
+    ], 
+    "d5f66d52459d2438e2c011aa93a9753305afd87c": [
+      "3.7.0"
     ]
   }, 
   "media/system/css/modal.css": {
@@ -909,7 +971,8 @@
     "c1f8db5d43203b36870e1a4efb6c04e2c0a3e360": [
       "3.6.4", 
       "3.6.3", 
-      "3.6.5"
+      "3.6.5", 
+      "3.7.0"
     ], 
     "e1f6e1b1a017629dbf7a9ffa68ec588f5398e027": [
       "3.3.0", 
@@ -985,6 +1048,9 @@
       "3.6.3", 
       "3.6.5"
     ], 
+    "bc62c3a38bd95bf7662975f1223067965bdc700d": [
+      "3.7.0"
+    ], 
     "cc1ddacbff854f8244096cc0ebc9213a8dab52d6": [
       "3.0.0", 
       "3.0.1", 
@@ -1057,6 +1123,9 @@
       "3.6.2", 
       "3.6.3", 
       "3.6.5"
+    ], 
+    "d138d949ce09408632d14c88beb8321fbe7f6a57": [
+      "3.7.0"
     ]
   }, 
   "media/system/css/system.css": {
@@ -1100,6 +1169,9 @@
       "3.4.8", 
       "3.4.2"
     ], 
+    "866b9e67e47cf19cb1a34cee5f4cd70c8c31f68e": [
+      "3.7.0"
+    ], 
     "dd4def4fd8ed66765e602a822be85125eb17cec6": [
       "3.2.0", 
       "3.2.1", 
@@ -1111,6 +1183,11 @@
       "3.1.4", 
       "3.1.5", 
       "3.1.6"
+    ]
+  }, 
+  "media/system/js/associations-edit.js": {
+    "707c5bb9c3dc3950509f9faddd25089db84fd56c": [
+      "3.7.0"
     ]
   }, 
   "media/system/js/calendar-setup.js": {
@@ -1156,7 +1233,8 @@
       "3.1.4", 
       "3.1.5", 
       "3.1.6", 
-      "3.6.5"
+      "3.6.5", 
+      "3.7.0"
     ]
   }, 
   "media/system/js/calendar.js": {
@@ -1168,7 +1246,8 @@
       "3.6.1", 
       "3.6.2", 
       "3.6.3", 
-      "3.6.5"
+      "3.6.5", 
+      "3.7.0"
     ], 
     "e3b3595d662209d01b3d731d3a48191e67bf3347": [
       "3.3.0", 
@@ -1256,7 +1335,18 @@
       "3.3.5", 
       "3.3.6", 
       "3.4.2", 
-      "3.6.5"
+      "3.6.5", 
+      "3.7.0"
+    ]
+  }, 
+  "media/system/js/color-field-adv-init.js": {
+    "e1743d88beb37cb1a9ad3e199a8dd1fd13ca3e3a": [
+      "3.7.0"
+    ]
+  }, 
+  "media/system/js/color-field-init.js": {
+    "743b2d0e5cfd8df5734fc6b79db7f9ec2fdeed5e": [
+      "3.7.0"
     ]
   }, 
   "media/system/js/combobox.js": {
@@ -1304,7 +1394,8 @@
       "3.2.5", 
       "3.2.6", 
       "3.2.7", 
-      "3.6.5"
+      "3.6.5", 
+      "3.7.0"
     ]
   }, 
   "media/system/js/core.js": {
@@ -1365,12 +1456,215 @@
       "3.1.5", 
       "3.1.6"
     ], 
+    "dd53bbaab17d8676717a300a4d02df0a6a9c0215": [
+      "3.7.0"
+    ], 
     "fe388ba594666a4f8a17f20516911990829faa5c": [
       "3.4.0"
     ], 
     "ff38939029e172378c3abee26e56e1c5f8aad63e": [
       "3.5.0", 
       "3.5.1"
+    ]
+  }, 
+  "media/system/js/fields/calendar-locales/af.js": {
+    "8d81201dbf98ef1f3924abe17dd5205bee80f27c": [
+      "3.7.0"
+    ]
+  }, 
+  "media/system/js/fields/calendar-locales/ar.js": {
+    "5064fb0f6846cf11ee0717bfcb1406c0103049ae": [
+      "3.7.0"
+    ]
+  }, 
+  "media/system/js/fields/calendar-locales/bg.js": {
+    "b91394b4afdb44e866a2663ed41e64650b604542": [
+      "3.7.0"
+    ]
+  }, 
+  "media/system/js/fields/calendar-locales/bs.js": {
+    "13bfe0f1858d0145878c71abe7527c36c6f34896": [
+      "3.7.0"
+    ]
+  }, 
+  "media/system/js/fields/calendar-locales/ca.js": {
+    "26f0ee4c903b13faffca56dcf5ff759011143466": [
+      "3.7.0"
+    ]
+  }, 
+  "media/system/js/fields/calendar-locales/cs.js": {
+    "45df9a65e23acc4d86064c910eebe4afacac544d": [
+      "3.7.0"
+    ]
+  }, 
+  "media/system/js/fields/calendar-locales/cy.js": {
+    "668ff5415f3860c2612e6f2d99306397ec684c22": [
+      "3.7.0"
+    ]
+  }, 
+  "media/system/js/fields/calendar-locales/da.js": {
+    "c6be6ebee9903db06fa3aef6aa2792f516b847f8": [
+      "3.7.0"
+    ]
+  }, 
+  "media/system/js/fields/calendar-locales/date/gregorian/date-helper.js": {
+    "97c0d05b0389188c1c91401876c877b0c5d442e7": [
+      "3.7.0"
+    ]
+  }, 
+  "media/system/js/fields/calendar-locales/date/jalali/date-helper.js": {
+    "563455d02107d85a7a1c3fef013378d7e0ff6a82": [
+      "3.7.0"
+    ]
+  }, 
+  "media/system/js/fields/calendar-locales/de.js": {
+    "ee8cf766c85396c3c86d5b65aa823842d9dac5f5": [
+      "3.7.0"
+    ]
+  }, 
+  "media/system/js/fields/calendar-locales/el.js": {
+    "9f0e099e9d69f59a60eca757508dfa6504a90984": [
+      "3.7.0"
+    ]
+  }, 
+  "media/system/js/fields/calendar-locales/en.js": {
+    "d3e4783a99c6428c75046b0ae8d942faadedaf35": [
+      "3.7.0"
+    ]
+  }, 
+  "media/system/js/fields/calendar-locales/es.js": {
+    "f8a96dfe3341b9a03f5c60146de95f67decd0df5": [
+      "3.7.0"
+    ]
+  }, 
+  "media/system/js/fields/calendar-locales/eu.js": {
+    "2385f86dfc53bb86f3bcaafc0ef12d0813153b03": [
+      "3.7.0"
+    ]
+  }, 
+  "media/system/js/fields/calendar-locales/fa-ir.js": {
+    "36247b4474666e08f70b2f46cda7f9291880766a": [
+      "3.7.0"
+    ]
+  }, 
+  "media/system/js/fields/calendar-locales/fr.js": {
+    "bfcf258305107b948bc6771d0b825ba3abbd3649": [
+      "3.7.0"
+    ]
+  }, 
+  "media/system/js/fields/calendar-locales/ga.js": {
+    "a459437cf8f3940186a308508add6590c0f3f797": [
+      "3.7.0"
+    ]
+  }, 
+  "media/system/js/fields/calendar-locales/hr.js": {
+    "f9170ddb1ff5bd31b4aaf8f7e876e4514bb81c11": [
+      "3.7.0"
+    ]
+  }, 
+  "media/system/js/fields/calendar-locales/hu.js": {
+    "205fe7e0e6da51fc6e1c699b1de676f888d978ee": [
+      "3.7.0"
+    ]
+  }, 
+  "media/system/js/fields/calendar-locales/it.js": {
+    "72169c2a6731166742024904d0117abfe65b348e": [
+      "3.7.0"
+    ]
+  }, 
+  "media/system/js/fields/calendar-locales/ja.js": {
+    "ab81fa0e7fe1b5c2e1ab797d8931155b8c717f27": [
+      "3.7.0"
+    ]
+  }, 
+  "media/system/js/fields/calendar-locales/ka.js": {
+    "136836fe34221db4ec7a9ef6d03eea81f8b2a71e": [
+      "3.7.0"
+    ]
+  }, 
+  "media/system/js/fields/calendar-locales/ko.js": {
+    "0e9b964675618e2642ee7ab4fbb0f084e246a06a": [
+      "3.7.0"
+    ]
+  }, 
+  "media/system/js/fields/calendar-locales/mk.js": {
+    "e58d76130cc3e630fdbfb6ccc5ca1142c7541988": [
+      "3.7.0"
+    ]
+  }, 
+  "media/system/js/fields/calendar-locales/nb.js": {
+    "03771cf5ec412147788483d135d23776e5a6a489": [
+      "3.7.0"
+    ]
+  }, 
+  "media/system/js/fields/calendar-locales/nl.js": {
+    "3b946346ab4cb57defc2be3cf7965ff0d3298b50": [
+      "3.7.0"
+    ]
+  }, 
+  "media/system/js/fields/calendar-locales/pl.js": {
+    "f3e09cf68925f6e1c39f628164de7a4ec4c4b82a": [
+      "3.7.0"
+    ]
+  }, 
+  "media/system/js/fields/calendar-locales/prs-af.js": {
+    "36247b4474666e08f70b2f46cda7f9291880766a": [
+      "3.7.0"
+    ]
+  }, 
+  "media/system/js/fields/calendar-locales/pt.js": {
+    "d0eb35794add7a5c8d980c85685d5be87328bb77": [
+      "3.7.0"
+    ]
+  }, 
+  "media/system/js/fields/calendar-locales/sk.js": {
+    "fd9d496561bb2e2848e2a0c3efe8b1e7af21759b": [
+      "3.7.0"
+    ]
+  }, 
+  "media/system/js/fields/calendar-locales/sl.js": {
+    "0bc005264c46d967c9fc309bf242fa65b9ee0352": [
+      "3.7.0"
+    ]
+  }, 
+  "media/system/js/fields/calendar-locales/sr-rs.js": {
+    "6631498d02bf8dc10db253b96a04acdb125bb4f1": [
+      "3.7.0"
+    ]
+  }, 
+  "media/system/js/fields/calendar-locales/sr-yu.js": {
+    "51a07be3364f3c25185882b342861cd0e70315e2": [
+      "3.7.0"
+    ]
+  }, 
+  "media/system/js/fields/calendar-locales/sv.js": {
+    "10d347d18bcac4defa24aa4434679852874d40a8": [
+      "3.7.0"
+    ]
+  }, 
+  "media/system/js/fields/calendar-locales/sw.js": {
+    "c83dce30eb478e13602a4ab20982fd270024c8da": [
+      "3.7.0"
+    ]
+  }, 
+  "media/system/js/fields/calendar-locales/ta.js": {
+    "bd2e952e6e8fd4849d21b88ed9b30fb234fa9a47": [
+      "3.7.0"
+    ]
+  }, 
+  "media/system/js/fields/calendar-locales/th.js": {
+    "9a9e4b13937f046406c86da123cb50cb1932e5f6": [
+      "3.7.0"
+    ]
+  }, 
+  "media/system/js/fields/calendar-locales/zh.js": {
+    "3bb5a1e653bb2a71da4e1cb6c44f0d9df79ae585": [
+      "3.7.0"
+    ]
+  }, 
+  "media/system/js/fields/calendar.js": {
+    "c44e2514e4c0be1a517102adef60be154332c555": [
+      "3.7.0"
     ]
   }, 
   "media/system/js/frontediting.js": {
@@ -1415,7 +1709,8 @@
       "3.6.1", 
       "3.6.2", 
       "3.6.3", 
-      "3.6.5"
+      "3.6.5", 
+      "3.7.0"
     ]
   }, 
   "media/system/js/helpsite.js": {
@@ -1433,6 +1728,9 @@
       "3.6.2", 
       "3.6.3", 
       "3.6.5"
+    ], 
+    "2727bcd94d723a79b47b2a0befa786c623d6bee0": [
+      "3.7.0"
     ], 
     "891defc495db51a24d9532efce0a056d8f4e5ae8": [
       "3.4.0", 
@@ -1508,7 +1806,8 @@
       "3.2.5", 
       "3.2.6", 
       "3.2.7", 
-      "3.6.5"
+      "3.6.5", 
+      "3.7.0"
     ]
   }, 
   "media/system/js/html5fallback.js": {
@@ -1541,6 +1840,9 @@
       "3.3.4", 
       "3.3.5", 
       "3.3.6"
+    ], 
+    "8489708e831936add1b756cce525a96dd4767983": [
+      "3.7.0"
     ], 
     "9f7caa00f628ad7632fd4711bc3865a1d9ebc18a": [
       "3.4.3", 
@@ -1588,7 +1890,18 @@
       "3.6.1", 
       "3.6.2", 
       "3.6.3", 
-      "3.6.5"
+      "3.6.5", 
+      "3.7.0"
+    ]
+  }, 
+  "media/system/js/keepalive.js": {
+    "0ac3469424090b8f861fd8bdf80d28f7c4dc16e9": [
+      "3.7.0"
+    ]
+  }, 
+  "media/system/js/modal-fields.js": {
+    "0ff5a172e4515abe85a2f911a1eadb0418d86874": [
+      "3.7.0"
     ]
   }, 
   "media/system/js/modal.js": {
@@ -1613,7 +1926,8 @@
       "3.3.5", 
       "3.3.6", 
       "3.4.2", 
-      "3.6.5"
+      "3.6.5", 
+      "3.7.0"
     ], 
     "bd7115c100422d2963f97a2b4c96a7fd3c1763b9": [
       "3.3.0", 
@@ -1644,6 +1958,9 @@
       "3.6.4", 
       "3.6.3", 
       "3.6.5"
+    ], 
+    "d566fd7dd54d345e082529652e3b2848989e2119": [
+      "3.7.0"
     ]
   }, 
   "media/system/js/mooRainbow.js": {
@@ -1698,7 +2015,8 @@
       "3.1.4", 
       "3.1.5", 
       "3.1.6", 
-      "3.6.5"
+      "3.6.5", 
+      "3.7.0"
     ]
   }, 
   "media/system/js/mootools-more.js": {
@@ -1744,7 +2062,8 @@
       "3.1.4", 
       "3.1.5", 
       "3.1.6", 
-      "3.6.5"
+      "3.6.5", 
+      "3.7.0"
     ]
   }, 
   "media/system/js/mootree.js": {
@@ -1790,7 +2109,8 @@
       "3.1.4", 
       "3.1.5", 
       "3.1.6", 
-      "3.6.5"
+      "3.6.5", 
+      "3.7.0"
     ]
   }, 
   "media/system/js/multiselect.js": {
@@ -1827,7 +2147,8 @@
       "3.6.2", 
       "3.6.3", 
       "3.4.2", 
-      "3.6.5"
+      "3.6.5", 
+      "3.7.0"
     ], 
     "95ee834e120dec8f860f1c2f3eb823a7ead0ed4f": [
       "3.0.0", 
@@ -1877,7 +2198,8 @@
       "3.2.5", 
       "3.2.6", 
       "3.2.7", 
-      "3.6.5"
+      "3.6.5", 
+      "3.7.0"
     ], 
     "98106801411d2bc4b8f0fb36699dbabf5b77d5ab": [
       "3.0.0", 
@@ -1905,6 +2227,29 @@
       "3.6.2", 
       "3.6.3", 
       "3.6.5"
+    ], 
+    "dd589d43133cf6c35cfd895ed773592a62e865c4": [
+      "3.7.0"
+    ]
+  }, 
+  "media/system/js/polyfill.classlist.js": {
+    "7fb0a2cbe028517cc836c8c6ed874dbc2e035957": [
+      "3.7.0"
+    ]
+  }, 
+  "media/system/js/polyfill.event.js": {
+    "24dfd0850468e59785750e35605b7856bd9abd40": [
+      "3.7.0"
+    ]
+  }, 
+  "media/system/js/polyfill.filter.js": {
+    "cfe15aa0aaa5f58aefe489668b3f7813fd89dfbe": [
+      "3.7.0"
+    ]
+  }, 
+  "media/system/js/polyfill.map.js": {
+    "0e3fd7832e7bafa5f8791500972944a00bfc2781": [
+      "3.7.0"
     ]
   }, 
   "media/system/js/progressbar.js": {
@@ -1939,7 +2284,8 @@
       "3.2.5", 
       "3.2.6", 
       "3.2.7", 
-      "3.6.5"
+      "3.6.5", 
+      "3.7.0"
     ], 
     "c7eda511d2487e997a5642661991788bf016c270": [
       "3.0.0", 
@@ -1988,7 +2334,8 @@
       "3.6.1", 
       "3.6.2", 
       "3.6.3", 
-      "3.6.5"
+      "3.6.5", 
+      "3.7.0"
     ], 
     "beccac772e1f71a2bc4b0b6dbe7a8eb849672341": [
       "3.2.2"
@@ -2009,6 +2356,9 @@
       "3.6.4", 
       "3.6.3", 
       "3.6.5"
+    ], 
+    "635fa758ade2ca7d8b1c3e9a2191cf3c88fe89e8": [
+      "3.7.0"
     ], 
     "7e6a44df0bbe3f0a5fb45fdcab6f472d305062d7": [
       "3.3.0", 
@@ -2049,7 +2399,8 @@
       "3.6.1", 
       "3.6.2", 
       "3.6.3", 
-      "3.6.5"
+      "3.6.5", 
+      "3.7.0"
     ], 
     "dfb2a96a57ab2155d1ed64faf71bc71a33c9fe29": [
       "3.5.1"
@@ -2060,6 +2411,9 @@
       "3.6.4", 
       "3.6.3", 
       "3.6.5"
+    ], 
+    "937274bf0763814ac3abc156a38479f364a9fd66": [
+      "3.7.0"
     ], 
     "c9264687c12c8cdbfc419ec534aa993e8547f3f0": [
       "3.6.0", 
@@ -2120,7 +2474,8 @@
       "3.2.5", 
       "3.2.6", 
       "3.2.7", 
-      "3.6.5"
+      "3.6.5", 
+      "3.7.0"
     ]
   }, 
   "media/system/js/tabs-state.js": {
@@ -2155,6 +2510,9 @@
       "3.4.7", 
       "3.4.8", 
       "3.4.2"
+    ], 
+    "93738dda27959780901c34253d6292d31b1d6763": [
+      "3.7.0"
     ], 
     "a13e32a02287bbfec967104ee77324f6708c790d": [
       "3.5.0", 
@@ -2224,6 +2582,9 @@
     "8fbaa28ec9d4ca17bd9a0b84842c2fda13893714": [
       "3.5.0", 
       "3.5.1"
+    ], 
+    "a786244e5c44e637dafe954bdac57cf23d817c3d": [
+      "3.7.0"
     ]
   }, 
   "media/system/js/tiny-close.js": {
@@ -2287,6 +2648,9 @@
     ], 
     "7ad6a8e715c789caaf254d31fdda69d1ff790e6b": [
       "3.4.0"
+    ], 
+    "a4f8c74cb9a2d9c51f6df5e44b475c65963d9743": [
+      "3.7.0"
     ], 
     "b90fef63f8ff2ccfe1c97ecbf383d3c23b7a249b": [
       "3.4.1", 
@@ -2358,6 +2722,9 @@
       "3.2.6", 
       "3.2.7"
     ], 
+    "505b0edf2705cb3d8b3e7332508711c60f10a443": [
+      "3.7.0"
+    ], 
     "64d110a8fe827821492361746f3bf7192327a553": [
       "3.5.0", 
       "3.5.1"
@@ -2382,6 +2749,9 @@
       "3.6.2", 
       "3.6.3", 
       "3.6.5"
+    ], 
+    "2448a3bec4d17430894df9dd283e997ee1626a11": [
+      "3.7.0"
     ], 
     "822275608813f7abeedf5dbe33e97a0961692cdc": [
       "3.4.0", 
@@ -2425,6 +2795,9 @@
     ]
   }, 
   "templates/beez3/css/ieonly.css": {
+    "047a3ed187d8ebfcf51cd1205adf0fe5a21e3dd5": [
+      "3.7.0"
+    ], 
     "1b7f66523878bce45f801c8540401e8512131dce": [
       "3.6.4", 
       "3.6.0", 
@@ -2476,6 +2849,9 @@
     "04c67b7355dc4eb1be65f835b3b780f8398ea75e": [
       "3.5.0", 
       "3.5.1"
+    ], 
+    "325ceb2a58e0d6b1f97ffa037dd2157fabef11f1": [
+      "3.7.0"
     ], 
     "4f86527970411ca1942219e2c27029e27e4937b5": [
       "3.0.3", 
@@ -2573,7 +2949,8 @@
       "3.3.5", 
       "3.3.6", 
       "3.4.2", 
-      "3.6.5"
+      "3.6.5", 
+      "3.7.0"
     ]
   }, 
   "templates/beez3/css/nature_rtl.css": {
@@ -2619,7 +2996,8 @@
       "3.1.4", 
       "3.1.5", 
       "3.1.6", 
-      "3.6.5"
+      "3.6.5", 
+      "3.7.0"
     ]
   }, 
   "templates/beez3/css/personal.css": {
@@ -2667,7 +3045,8 @@
       "3.3.5", 
       "3.3.6", 
       "3.4.2", 
-      "3.6.5"
+      "3.6.5", 
+      "3.7.0"
     ]
   }, 
   "templates/beez3/css/personal_rtl.css": {
@@ -2713,10 +3092,14 @@
       "3.1.4", 
       "3.1.5", 
       "3.1.6", 
-      "3.6.5"
+      "3.6.5", 
+      "3.7.0"
     ]
   }, 
   "templates/beez3/css/position.css": {
+    "11083e25789c3690f3eea4c33e9bf716e4355470": [
+      "3.7.0"
+    ], 
     "1523e79aefef2f1896d3388851fb17fc54ed8e82": [
       "3.0.1", 
       "3.0.2", 
@@ -2807,6 +3190,9 @@
       "3.1.5", 
       "3.1.6"
     ], 
+    "8b24adb7fb28bed99cca56410efc1c6ef60070c6": [
+      "3.7.0"
+    ], 
     "d077714dc90b391dd1fdbb417e013b7b091e4bc6": [
       "3.6.4", 
       "3.6.0", 
@@ -2839,7 +3225,8 @@
       "3.3.5", 
       "3.3.6", 
       "3.4.2", 
-      "3.6.5"
+      "3.6.5", 
+      "3.7.0"
     ], 
     "b7ea3276c6ce386d7095df994478172882c9594a": [
       "3.3.0", 
@@ -2912,6 +3299,9 @@
       "3.5.0", 
       "3.5.1", 
       "3.4.2"
+    ], 
+    "b6360055268e5c6183329c1990d0163d5afa829d": [
+      "3.7.0"
     ]
   }, 
   "templates/beez3/css/template_rtl.css": {
@@ -2956,6 +3346,9 @@
       "3.2.0", 
       "3.2.1"
     ], 
+    "bc8563b9a13416fe7c4862310adaae9855ea6fee": [
+      "3.7.0"
+    ], 
     "e1065bbd704ad37e66aac6ad5486988bf4a07ac7": [
       "3.0.3", 
       "3.0.4", 
@@ -2997,7 +3390,8 @@
       "3.6.1", 
       "3.6.2", 
       "3.6.3", 
-      "3.6.5"
+      "3.6.5", 
+      "3.7.0"
     ], 
     "e337d62afd7f8890d3ce9789d7e7f7e5ac91aa43": [
       "3.3.0", 
@@ -3071,6 +3465,9 @@
       "3.4.7", 
       "3.4.8", 
       "3.4.2"
+    ], 
+    "d99afad0a734cff8f7bbc2da8d790100a11805eb": [
+      "3.7.0"
     ]
   }, 
   "templates/beez3/javascript/md_stylechanger.js": {
@@ -3115,7 +3512,8 @@
       "3.1.4", 
       "3.1.5", 
       "3.1.6", 
-      "3.6.5"
+      "3.6.5", 
+      "3.7.0"
     ]
   }, 
   "templates/beez3/javascript/respond.js": {
@@ -3159,7 +3557,8 @@
       "3.6.1", 
       "3.6.2", 
       "3.6.3", 
-      "3.6.5"
+      "3.6.5", 
+      "3.7.0"
     ], 
     "a93fbe4bd85a5cd422ada1b12f91ee95143df83c": [
       "3.0.0", 
@@ -3181,7 +3580,8 @@
       "3.6.1", 
       "3.6.2", 
       "3.6.3", 
-      "3.6.5"
+      "3.6.5", 
+      "3.7.0"
     ], 
     "7f00bbd72fd92f841dcfd8f2511a7583aedce31a": [
       "3.0.0", 
@@ -3217,6 +3617,9 @@
     ]
   }, 
   "templates/beez3/javascript/template.js": {
+    "0a2da736bdea702e2c55972bf1b59731f9464457": [
+      "3.7.0"
+    ], 
     "20b50380a6ec3dd59413fbaa61b9659beac43507": [
       "3.5.0", 
       "3.5.1", 
@@ -3261,6 +3664,9 @@
     ]
   }, 
   "templates/protostar/css/offline.css": {
+    "73abf2fac78b734e5de60bbb41f693b4c283e535": [
+      "3.7.0"
+    ], 
     "7466b48be695961a95829e7427d2309579af2669": [
       "3.6.4", 
       "3.6.0", 
@@ -3284,6 +3690,9 @@
     ], 
     "2efc0d4d97d93c61b79c6592c9068bf54a747b0f": [
       "3.6.0"
+    ], 
+    "3105cb798d59c3ef08ba6d7ca58db7416cc9bfff": [
+      "3.7.0"
     ], 
     "40f585b7cf74f3f504c2eb736bb564b1b2127350": [
       "3.5.0", 
@@ -3401,7 +3810,8 @@
       "3.1.4", 
       "3.1.5", 
       "3.1.6", 
-      "3.6.5"
+      "3.6.5", 
+      "3.7.0"
     ]
   }, 
   "templates/protostar/js/classes.js": {
@@ -3439,10 +3849,14 @@
       "3.1.4", 
       "3.1.5", 
       "3.1.6", 
-      "3.6.5"
+      "3.6.5", 
+      "3.7.0"
     ]
   }, 
   "templates/protostar/js/template.js": {
+    "0cda67b9dfad9967810c76ae0b2db6f32afdaf46": [
+      "3.7.0"
+    ], 
     "3f8042b9e6937e95c562dce96ca27004cb5f9a3e": [
       "3.4.0", 
       "3.4.1", 
@@ -3518,6 +3932,9 @@
       "3.2.6", 
       "3.2.7"
     ], 
+    "9f704e2394b98afb95bb8bed76966ebbe0a55d6a": [
+      "3.7.0"
+    ], 
     "f67d51c944ca52155e9c89f7eb243b161fcc9539": [
       "3.2.0", 
       "3.2.1", 
@@ -3575,6 +3992,9 @@
       "3.1.4", 
       "3.1.5", 
       "3.1.6"
+    ], 
+    "42fd083e2715b4f72874abc07a2f6f1b6e531165": [
+      "3.7.0"
     ], 
     "cf0bbb712a9fbfd91484ee874e959388d8ca3308": [
       "3.3.0", 
@@ -3644,6 +4064,9 @@
       "3.4.7", 
       "3.4.8", 
       "3.4.2"
+    ], 
+    "b45fb45a649ea9ea641549c15e15381073e65796": [
+      "3.7.0"
     ]
   }, 
   "templates/system/css/general.css": {
@@ -3657,6 +4080,9 @@
       "3.4.7", 
       "3.4.8", 
       "3.4.2"
+    ], 
+    "1c682aeff2cfd7c0b54841a8fc4dee5a61b09795": [
+      "3.7.0"
     ], 
     "2a4988f1a294054064b8b9957199b77c63ffa459": [
       "3.6.4", 
@@ -3752,6 +4178,9 @@
       "3.0.0", 
       "3.0.1", 
       "3.0.2"
+    ], 
+    "e0228cf3cf4b5f2eb0618344e81d9ccb0d8a9c89": [
+      "3.7.0"
     ]
   }, 
   "templates/system/css/offline_rtl.css": {
@@ -3792,6 +4221,9 @@
       "3.2.4", 
       "3.2.6", 
       "3.2.7"
+    ], 
+    "8d94534accdf674dec822f155cb24b7359769665": [
+      "3.7.0"
     ], 
     "cec87731fe347f8d77fd136f7390266ea39bd168": [
       "3.2.0", 
@@ -3854,6 +4286,9 @@
       "3.6.3", 
       "3.6.5"
     ], 
+    "ac025d5144f76b82165ec862b78568cc92655f1d": [
+      "3.7.0"
+    ], 
     "bb7e825ba4eefbc8ef0cf74a5b5dc2f0fa25d5d2": [
       "3.0.0", 
       "3.0.1", 
@@ -3900,6 +4335,9 @@
       "3.1.4", 
       "3.1.5", 
       "3.1.6"
+    ], 
+    "eee3217260c2edb54c43aab3b58495f28f9c6e9e": [
+      "3.7.0"
     ], 
     "f8f1fb801d247e30f83dfe97523770dff4370cab": [
       "3.6.4", 
