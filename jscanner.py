@@ -1,7 +1,7 @@
 import argparse
 import logging
 import re
-import requests.packages.urllib3
+
 from textwrap import dedent as textwrap_dedent
 from datetime import datetime
 
@@ -12,20 +12,6 @@ __license__ = 'GNU GPL version 3 or later'
 
 class JScanner:
     def __init__(self):
-
-        # Disable warnings about SSL connections
-        try:
-            from requests.packages.urllib3.exceptions import InsecureRequestWarning
-            requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
-        except ImportError:
-            pass
-
-        try:
-            from requests.packages.urllib3.exceptions import InsecurePlatformWarning
-            requests.packages.urllib3.disable_warnings(InsecurePlatformWarning)
-        except ImportError:
-            pass
-
         self.settings = None
         self.version = '1.1.1'
 
@@ -101,14 +87,29 @@ JScanner - What's under the hood?
         print("===============================================================================")
 
     def checkenv(self):
-        pass
+        try:
+            import requests.packages.urllib3
+        except ImportError:
+            raise Exception('requests package not installed. Run pip install -r requirements.txt and try again.')
+
+        # Disable warnings about SSL connections
+        try:
+            from requests.packages.urllib3.exceptions import InsecureRequestWarning
+            requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
+        except ImportError:
+            pass
+
+        try:
+            from requests.packages.urllib3.exceptions import InsecurePlatformWarning
+            requests.packages.urllib3.disable_warnings(InsecurePlatformWarning)
+        except ImportError:
+            pass
 
     def check_updates(self):
         pass
 
     def run(self):
         self.banner()
-        self.check_updates()
 
         # Perform some sanity checks
         try:
@@ -116,6 +117,8 @@ JScanner - What's under the hood?
         except Exception as error:
             print "[!] " + str(error)
             return
+
+        self.check_updates()
 
         # Let's load the correct object
         if self.args.command == 'analyze':
