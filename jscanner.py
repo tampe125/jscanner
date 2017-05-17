@@ -3,9 +3,10 @@ import logging
 import re
 import requests.packages.urllib3
 from textwrap import dedent as textwrap_dedent
+from datetime import datetime
 
 __author__ = 'Davide Tampellini'
-__copyright__ = '2016 Davide Tampellini - FabbricaBinaria'
+__copyright__ = '2016-2017 Davide Tampellini - FabbricaBinaria'
 __license__ = 'GNU GPL version 3 or later'
 
 
@@ -88,8 +89,10 @@ JScanner - What's under the hood?
         logging.getLogger("requests").setLevel(logging.WARNING)
 
     def banner(self):
+        now = datetime.now()
+
         print("JScanner " + self.version + " - What's under the hood?")
-        print("Copyright (C) 2016 FabbricaBinaria - Davide Tampellini")
+        print("Copyright (C) 2016-" + str(now.year) + " FabbricaBinaria - Davide Tampellini")
         print("===============================================================================")
         print("JScanner is Free Software, distributed under the terms of the GNU General")
         print("Public License version 3 or, at your option, any later version.")
