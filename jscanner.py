@@ -1,32 +1,19 @@
 import argparse
 import logging
 import re
-import requests.packages.urllib3
+
 from textwrap import dedent as textwrap_dedent
+from datetime import datetime
 
 __author__ = 'Davide Tampellini'
-__copyright__ = '2016 Davide Tampellini - FabbricaBinaria'
+__copyright__ = '2016-2017 Davide Tampellini - FabbricaBinaria'
 __license__ = 'GNU GPL version 3 or later'
 
 
 class JScanner:
     def __init__(self):
-
-        # Disable warnings about SSL connections
-        try:
-            from requests.packages.urllib3.exceptions import InsecureRequestWarning
-            requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
-        except ImportError:
-            pass
-
-        try:
-            from requests.packages.urllib3.exceptions import InsecurePlatformWarning
-            requests.packages.urllib3.disable_warnings(InsecurePlatformWarning)
-        except ImportError:
-            pass
-
         self.settings = None
-        self.version = '1.1.1'
+        self.version = '1.2.0'
 
         parser = argparse.ArgumentParser(formatter_class=argparse.RawDescriptionHelpFormatter,
                                          description=textwrap_dedent('''
@@ -88,8 +75,10 @@ JScanner - What's under the hood?
         logging.getLogger("requests").setLevel(logging.WARNING)
 
     def banner(self):
+        now = datetime.now()
+
         print("JScanner " + self.version + " - What's under the hood?")
-        print("Copyright (C) 2016 FabbricaBinaria - Davide Tampellini")
+        print("Copyright (C) 2016-" + str(now.year) + " FabbricaBinaria - Davide Tampellini")
         print("===============================================================================")
         print("JScanner is Free Software, distributed under the terms of the GNU General")
         print("Public License version 3 or, at your option, any later version.")
@@ -98,14 +87,29 @@ JScanner - What's under the hood?
         print("===============================================================================")
 
     def checkenv(self):
-        pass
+        try:
+            import requests.packages.urllib3
+        except ImportError:
+            raise Exception('requests package not installed. Run pip install -r requirements.txt and try again.')
+
+        # Disable warnings about SSL connections
+        try:
+            from requests.packages.urllib3.exceptions import InsecureRequestWarning
+            requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
+        except ImportError:
+            pass
+
+        try:
+            from requests.packages.urllib3.exceptions import InsecurePlatformWarning
+            requests.packages.urllib3.disable_warnings(InsecurePlatformWarning)
+        except ImportError:
+            pass
 
     def check_updates(self):
         pass
 
     def run(self):
         self.banner()
-        self.check_updates()
 
         # Perform some sanity checks
         try:
@@ -113,6 +117,8 @@ JScanner - What's under the hood?
         except Exception as error:
             print "[!] " + str(error)
             return
+
+        self.check_updates()
 
         # Let's load the correct object
         if self.args.command == 'analyze':

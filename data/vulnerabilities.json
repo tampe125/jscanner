@@ -1310,5 +1310,130 @@
     "severity": "n/a", 
     "title": "Misc. Security Hardening", 
     "versions": []
+  }, 
+  "20161205": {
+    "cve": "N/A", 
+    "descr": "All versions of the third-party PHPMailer library distributed with Joomla! versions up to 3.6.5 are vulnerable to a remote code execution vulnerability. This is patched in PHPMailer 5.2.20 which will be included with Joomla! 3.7. After analysis, the JSST has determined that through correct use of the JMail class, there are additional validations in place which make executing this vulnerability impractical within the Joomla environment. As well, the vulnerability requires being able to pass user input to a message's \"from\" address; all places in the core Joomla API which send mail use the sender address set in the global configuration and does not allow for user input to be set elsewhere. However, extensions which bundle a separate version of PHPMailer or do not use the Joomla API to send email may be vulnerable to this issue.", 
+    "id": "20161205", 
+    "severity": "1.5.0 through 3.6.5", 
+    "title": "PHPMailer Security Advisory", 
+    "versions": []
+  }, 
+  "20170401": {
+    "cve": "CVE-2017-7983", 
+    "descr": "Mail sent using the JMail API leaked the used PHPMailer version in the mail headers.", 
+    "id": "20170401", 
+    "severity": "low", 
+    "title": "Core - Information Disclosure", 
+    "versions": [
+      {
+        "max": "3.6.5", 
+        "min": "1.5.0"
+      }
+    ]
+  }, 
+  "20170402": {
+    "cve": "CVE-2017-7984", 
+    "descr": "Inadequate filtering\u00a0leads to XSS in the template manager component.", 
+    "id": "20170402", 
+    "severity": "low", 
+    "title": "Core - XSS Vulnerability", 
+    "versions": [
+      {
+        "max": "3.6.5", 
+        "min": "3.2.0"
+      }
+    ]
+  }, 
+  "20170403": {
+    "cve": "CVE-2017-7985", 
+    "descr": "Inadequate filtering of multibyte characters leads to XSS vulnerabilities in various components.", 
+    "id": "20170403", 
+    "severity": "low", 
+    "title": "Core - XSS Vulnerability", 
+    "versions": [
+      {
+        "max": "3.6.5", 
+        "min": "1.5.0"
+      }
+    ]
+  }, 
+  "20170404": {
+    "cve": "CVE-2017-7986", 
+    "descr": "Inadequate filtering of specific HTML attributes\u00a0leads to XSS vulnerabilities in various components.", 
+    "id": "20170404", 
+    "severity": "low", 
+    "title": "Core - XSS Vulnerability", 
+    "versions": [
+      {
+        "max": "3.6.5", 
+        "min": "1.5.0"
+      }
+    ]
+  }, 
+  "20170405": {
+    "cve": "CVE-2017-7987", 
+    "descr": "Inadequate escaping of file and folder names leads to XSS vulnerabilities in the template manager component.", 
+    "id": "20170405", 
+    "severity": "low", 
+    "title": "Core - XSS Vulnerability", 
+    "versions": [
+      {
+        "max": "3.6.5", 
+        "min": "3.2.0"
+      }
+    ]
+  }, 
+  "20170406": {
+    "cve": "CVE-2017-7988", 
+    "descr": "Inadequate filtering of form contents lead allow to overwrite the author of an article.", 
+    "id": "20170406", 
+    "severity": "low", 
+    "title": "Core - ACL Violations", 
+    "versions": [
+      {
+        "max": "3.6.5", 
+        "min": "1.6.0"
+      }
+    ]
+  }, 
+  "20170407": {
+    "cve": "CVE-2017-7989", 
+    "descr": "Inadequate mime type checks allowed low-privilege users to upload swf files even if they were explicitly forbidden.", 
+    "id": "20170407", 
+    "severity": "low", 
+    "title": "Core - ACL Violations", 
+    "versions": [
+      {
+        "max": "3.6.5", 
+        "min": "3.2.0"
+      }
+    ]
+  }, 
+  "20170408": {
+    "cve": "CVE-2017-8057", 
+    "descr": "Multiple files caused full path disclosures on systems with enabled error reporting.", 
+    "id": "20170408", 
+    "severity": "low", 
+    "title": "Core - Information Disclosure", 
+    "versions": [
+      {
+        "max": "3.6.5", 
+        "min": "3.4.0"
+      }
+    ]
+  }, 
+  "20170501": {
+    "cve": "CVE-2017-8917", 
+    "descr": "Inadequate filtering of request data leads to a SQL Injection vulnerability.", 
+    "id": "20170501", 
+    "severity": "high", 
+    "title": "Core - SQL Injection", 
+    "versions": [
+      {
+        "max": "3.7.0", 
+        "min": "3.7.0"
+      }
+    ]
   }
 }
