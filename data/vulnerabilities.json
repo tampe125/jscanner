@@ -1334,7 +1334,7 @@
   }, 
   "20170402": {
     "cve": "CVE-2017-7984", 
-    "descr": "Inadequate filtering leads to XSS in the template manager component.",
+    "descr": "Inadequate filtering\u00a0leads to XSS in the template manager component.", 
     "id": "20170402", 
     "severity": "low", 
     "title": "Core - XSS Vulnerability", 
@@ -1360,7 +1360,7 @@
   }, 
   "20170404": {
     "cve": "CVE-2017-7986", 
-    "descr": "Inadequate filtering of specific HTML attributes leads to XSS vulnerabilities in various components.",
+    "descr": "Inadequate filtering of specific HTML attributes\u00a0leads to XSS vulnerabilities in various components.", 
     "id": "20170404", 
     "severity": "low", 
     "title": "Core - XSS Vulnerability", 
@@ -1420,6 +1420,19 @@
       {
         "max": "3.6.5", 
         "min": "3.4.0"
+      }
+    ]
+  }, 
+  "20170501": {
+    "cve": "CVE-2017-8917", 
+    "descr": "Inadequate filtering of request data leads to a SQL Injection vulnerability.", 
+    "id": "20170501", 
+    "severity": "high", 
+    "title": "Core - SQL Injection", 
+    "versions": [
+      {
+        "max": "3.7.0", 
+        "min": "3.7.0"
       }
     ]
   }
