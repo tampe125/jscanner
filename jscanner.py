@@ -13,7 +13,7 @@ __license__ = 'GNU GPL version 3 or later'
 class JScanner:
     def __init__(self):
         self.settings = None
-        self.version = '1.2.0'
+        self.version = '1.3.0'
 
         parser = argparse.ArgumentParser(formatter_class=argparse.RawDescriptionHelpFormatter,
                                          description=textwrap_dedent('''
