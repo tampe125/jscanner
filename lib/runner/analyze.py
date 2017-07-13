@@ -19,33 +19,40 @@ class JScannerAnalyze(RemoteCommand):
         Tries several techniques to fetch the version of the remote site
         :return:
         """
-        print "[*] Analyzing site " + self.parentArgs.url
+        if not self.parentArgs.quiet:
+            print "[*] Analyzing site " + self.parentArgs.url
 
         version = []
 
         if self.parentArgs.technique == 'all' or self.parentArgs.technique == 'xml':
-            print "[*] Trying to get the exact version from the XML file..."
+            if not self.parentArgs.quiet:
+                print "[*] Trying to get the exact version from the XML file..."
             version = self._xml_file()
 
         # If we can fetch the XML file, the version is 100% correct
         if not version:
             if self.parentArgs.technique == 'all' or self.parentArgs.technique == 'sql':
-                print "[*] Trying to detect version using SQL installation files..."
+                if not self.parentArgs.quiet:
+                    print "[*] Trying to detect version using SQL installation files..."
                 version = self._sql_files()
 
             # Still no version or more possible candidates? Time to fingerprint the media files
             if self.parentArgs.technique == 'all' or self.parentArgs.technique == 'media':
                 if len(version) != 1:
                     if len(version) > 1:
-                        print "\t[*] Found %d version candidates, trying to find the exact one" % len(version)
+                        if not self.parentArgs.quiet:
+                            print "\t[*] Found %d version candidates, trying to find the exact one" % len(version)
 
-                    print "[*] Trying to detect version using media file fingerprints..."
+                    if not self.parentArgs.quiet:
+                        print "[*] Trying to detect version using media file fingerprints..."
                     version = self._media_files(version)
 
         print ""
         print "[+] Detected Joomla! version(s): %s" % ', '.join(version)
 
-        self._list_vulnerabilities(version)
+        # In quiet mode we only fetch the version
+        if not self.parentArgs.quiet:
+            self._list_vulnerabilities(version)
 
     def _list_vulnerabilities(self, remote_versions):
         if not remote_versions:
@@ -175,7 +182,8 @@ class JScannerAnalyze(RemoteCommand):
                 candidates = signatures[digest]
             except KeyError:
                 # This should never happen, but better be safe than sorry
-                print "\t[!] Unknown %s signature for file %s" % (digest, filename)
+                if not self.parentArgs.quiet:
+                    print "\t[!] Unknown %s signature for file %s" % (digest, filename)
                 continue
 
             if len(version) == 0:
