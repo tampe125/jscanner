@@ -1435,5 +1435,34 @@
         "min": "3.7.0"
       }
     ]
+  }, 
+  "20170701": {
+    "cve": "CVE-2017-9933", 
+    "descr": "Improper cache invalidation leads to disclosure of form contents.", 
+    "id": "20170701", 
+    "severity": "high", 
+    "title": "Core - Information Disclosure", 
+    "versions": []
+  }, 
+  "20170702": {
+    "cve": "CVE-2017-9934", 
+    "descr": "Missing CSRF token checks and improper input validation lead to an XSS vulnerability.", 
+    "id": "20170702", 
+    "severity": "high", 
+    "title": "Core - XSS Vulnerability", 
+    "versions": []
+  }, 
+  "20170703": {
+    "cve": "CVE-2017-7985", 
+    "descr": "Inadequate filtering of multibyte characters leads to XSS vulnerabilities in various components.", 
+    "id": "20170703", 
+    "severity": "low", 
+    "title": "Core - XSS Vulnerability", 
+    "versions": [
+      {
+        "max": "3.7.2", 
+        "min": "1.5.0"
+      }
+    ]
   }
 }
