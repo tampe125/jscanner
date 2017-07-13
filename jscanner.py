@@ -40,6 +40,11 @@ JScanner - What's under the hood?
                                     required=False,
                                     choices=['all', 'xml', 'sql', 'media'],
                                     default="all")
+        parser_analyze.add_argument('-q', '--quiet',
+                                    help="Quiet mode",
+                                    required=False,
+                                    default=False,
+                                    action='store_true')
 
         enumerate_descr = "Enumerates registered usernames or emails"
         parser_enumerate = subparsers.add_parser('enumerate', help=enumerate_descr, description=enumerate_descr)
@@ -109,7 +114,8 @@ JScanner - What's under the hood?
         pass
 
     def run(self):
-        self.banner()
+        if not self.args.quiet:
+            self.banner()
 
         # Perform some sanity checks
         try:
